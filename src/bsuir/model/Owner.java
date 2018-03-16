@@ -15,17 +15,14 @@ public class Owner {
     private  String phone;
     private  String mail;
     private  String address;
-    private  String adreg;
+    private  String adrreg;
     private  String auto;
-    private  String int_dog;
+    private  String ind_dog;
     private  String index;
 
 
-
-
-
     public Owner(String id, String fio, String date_reg, String inv, String box_sq, String num, String pasp, String pw, String pd, String pn, String phone
-            , String mail, String address, String adreg, String auto, String int_dog, String index) {
+            , String mail, String address, String adrreg, String auto, String ind_dog, String index) {
 
         this.id = id;
         this.fio = fio;
@@ -40,9 +37,9 @@ public class Owner {
         this.phone = phone;
         this.mail = mail;
         this.address = address;
-        this.adreg = adreg;
+        this.adrreg = adrreg;
         this.auto = auto;
-        this.int_dog = int_dog;
+        this.ind_dog = ind_dog;
         this.index = index;
     }
 
@@ -114,6 +111,55 @@ public class Owner {
     }
     public void setPn(String pn) {
         this.pn = pn;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAdrreg() {
+        return adrreg;
+    }
+    public void setAdrreg(String adrreg) {
+        this.adrreg = adrreg;
+    }
+
+    public String getAuto() {
+        return auto;
+    }
+    public void setAuto(String auto) {
+        this.auto = auto;
+    }
+
+    public String getIndDog() {
+        return ind_dog;
+    }
+    public void setIndDog(String ind_dog) {
+        this.ind_dog = ind_dog;
+    }
+
+    public String getIndex() {
+        return index;
+    }
+    public void setIndex(String index) {
+        this.index = index;
     }
 
 }

@@ -1,7 +1,7 @@
 package bsuir.view;
 
 
-import bsuir.model.University;
+import bsuir.model.Organization;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -14,7 +14,7 @@ import java.util.List;
 
 public class MyTable extends TableView {
 
-    private List<University> usersData = FXCollections.observableArrayList();
+    private List<Organization> usersData = FXCollections.observableArrayList();
 
 
 
@@ -116,228 +116,228 @@ public class MyTable extends TableView {
 //            academicDegreeColumn.setPrefWidth(220.0);
 
 
-        idColumn.setCellValueFactory(new PropertyValueFactory<University, String>("id"));
+        idColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("id"));
         idColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        idColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        idColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setId(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        fioColumn.setCellValueFactory(new PropertyValueFactory<University, String>("fio"));
+        fioColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("fio"));
         fioColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        fioColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        fioColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
                 studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFio(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        dateRegColumn.setCellValueFactory(new PropertyValueFactory<University, String>("dateReg"));
+        dateRegColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("dateReg"));
         dateRegColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        dateRegColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        dateRegColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setDateReg(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        invColumn.setCellValueFactory(new PropertyValueFactory<University, String>("inv"));
+        invColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("inv"));
         invColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        invColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        invColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setInv(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        boxSqColumn.setCellValueFactory(new PropertyValueFactory<University, String>("boxSq"));
+        boxSqColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("boxSq"));
         boxSqColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        boxSqColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        boxSqColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setBoxSq(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        numColumn.setCellValueFactory(new PropertyValueFactory<University, String>("num"));
+        numColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("num"));
         numColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        numColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        numColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNum(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        paspColumn.setCellValueFactory(new PropertyValueFactory<University, String>("pasp"));
+        paspColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("pasp"));
         paspColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        paspColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        paspColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPasp(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        pwColumn.setCellValueFactory(new PropertyValueFactory<University, String>("pw"));
+        pwColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("pw"));
         pwColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        pwColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        pwColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPw(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        pdColumn.setCellValueFactory(new PropertyValueFactory<University, String>("pd"));
+        pdColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("pd"));
         pdColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        pdColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        pdColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPd(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        pnColumn.setCellValueFactory(new PropertyValueFactory<University, String>("pn"));
+        pnColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("pn"));
         pnColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        pnColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        pnColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPn(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        phoneColumn.setCellValueFactory(new PropertyValueFactory<University, String>("phone"));
+        phoneColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("phone"));
         phoneColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        phoneColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        phoneColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPhone(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        mailColumn.setCellValueFactory(new PropertyValueFactory<University, String>("mail"));
+        mailColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("mail"));
         mailColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        mailColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        mailColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setMail(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        addressColumn.setCellValueFactory(new PropertyValueFactory<University, String>("address"));
+        addressColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("address"));
         addressColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        addressColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        addressColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setAddress(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        adrregColumn.setCellValueFactory(new PropertyValueFactory<University, String>("adrreg"));
+        adrregColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("adrreg"));
         adrregColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        adrregColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        adrregColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setAdrreg(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        autoColumn.setCellValueFactory(new PropertyValueFactory<University, String>("auto"));
+        autoColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("auto"));
         autoColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        autoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        autoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setAuto(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        indDogColumn.setCellValueFactory(new PropertyValueFactory<University, String>("indDog"));
+        indDogColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("indDog"));
         indDogColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        indDogColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        indDogColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setIndDog(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        indexColumn.setCellValueFactory(new PropertyValueFactory<University, String>("index"));
+        indexColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("index"));
         indexColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        indexColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        indexColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setIndex(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        sqprColumn.setCellValueFactory(new PropertyValueFactory<University, String>("sqpr"));
+        sqprColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("sqpr"));
         sqprColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        sqprColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        sqprColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setSqpr(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        procColumn.setCellValueFactory(new PropertyValueFactory<University, String>("proc"));
+        procColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("proc"));
         procColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        procColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        procColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setProc(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        sqColumn.setCellValueFactory(new PropertyValueFactory<University, String>("sq"));
+        sqColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("sq"));
         sqColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        sqColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        sqColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setSq(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        osavtoColumn.setCellValueFactory(new PropertyValueFactory<University, String>("osavto"));
+        osavtoColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("osavto"));
         osavtoColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        osavtoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        osavtoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setOsavto(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        urColumn.setCellValueFactory(new PropertyValueFactory<University, String>("ur"));
+        urColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("ur"));
         urColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        urColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        urColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFaculty(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setUr(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        osspectrColumn.setCellValueFactory(new PropertyValueFactory<University, String>("osspectr"));
+        osspectrColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("osspectr"));
         osspectrColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        osspectrColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        osspectrColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNameOfDepartment(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setOsspectr(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        nedOneColumn.setCellValueFactory(new PropertyValueFactory<University, String>("nedOne"));
+        nedOneColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("ned_1"));
         nedOneColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        nedOneColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        nedOneColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNameOfDepartment(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNed_1(studentsStringCellEditEvent.getNewValue());
             }
         });
 
-        nedTwoColumn.setCellValueFactory(new PropertyValueFactory<University, String>("nedTwo"));
+        nedTwoColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("ned_2"));
         nedTwoColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        nedTwoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+        nedTwoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNameOfDepartment(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
+                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNed_2(studentsStringCellEditEvent.getNewValue());
             }
         });
 
@@ -347,20 +347,20 @@ public class MyTable extends TableView {
          */
 
 
-//        titleColumn.setCellValueFactory(new PropertyValueFactory<University, String>("title"));
+//        titleColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("title"));
 //        titleColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-//        titleColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+//        titleColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
 //            @Override
-//            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
+//            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
 //                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setTitle(studentsStringCellEditEvent.getNewValue());
 //            }
 //        });
 //
-//        academicDegreeColumn.setCellValueFactory(new PropertyValueFactory<University, String>("academicDegree"));
+//        academicDegreeColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("academicDegree"));
 //        academicDegreeColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-//        academicDegreeColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<University, String>>() {
+//        academicDegreeColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
 //            @Override
-//            public void handle(TableColumn.CellEditEvent<University, String> studentsStringCellEditEvent) {
+//            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
 //                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setAcademicDegree(studentsStringCellEditEvent.getNewValue());
 //            }
 //        });
@@ -374,14 +374,13 @@ public class MyTable extends TableView {
     }
 
 
-    public List<University> getDataU()
+    public List<Organization> getDataU()
     {
         return this.usersData;
     }
-    public void setDataU(List <University> inU)
+    public void setDataU(List <Organization> inU)
     {
         this.usersData = inU;
     }
 
 }
-
