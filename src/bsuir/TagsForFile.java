@@ -1,0 +1,39 @@
+package bsuir;
+
+public class TagsForFile {
+
+    public static String university = "university";
+    public static String faculty = "faculty";
+    public static String department = "department";
+    public static String fio = "fio";
+    public static String title = "title";
+    public static String academic = "academic";
+    public static String lecturer = "lecturer";
+
+    public static String ID = "ID";
+    public static String FIO = "FIO";
+    public static String DATE_REG = "DATE_REG";
+    public static String INV = "INV";
+    public static String BOX_SQ = "BOX_SQ";
+    public static String NUM = "NUM";
+    public static String PASP = "PASP";
+    public static String PW = "PW";
+    public static String PD = "PD";
+    public static String PN = "PN";
+    public static String PHONE = "PHONE";
+    public static String MAIL = "MAIL";
+    public static String ADDRESS = "ADDRESS";
+    public static String ADRREG = "ADRREG";
+    public static String AUTO = "AUTO";
+    public static String IND_DOG = "IND_DOG";
+    public static String INDEX = "INDEX";
+    public static String SQPR = "SQPR";
+    public static String PROC = "PROC";
+    public static String SQ = "SQ";
+    public static String OSAVTO = "OSAVTO";
+    public static String UR = "UR";
+    public static String OSSPECTR = "OSSPECTR";
+    public static String NED_1 = "NED_1";
+    public static String NED_2 = "NED_2";
+}
+
