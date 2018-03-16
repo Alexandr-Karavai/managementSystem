@@ -1,8 +1,8 @@
 package bsuir.file;
 
 import bsuir.TagsForFile;
-import bsuir.model.Lecturer;
-import bsuir.model.University;
+import bsuir.model.Owner;
+import bsuir.model.Organization;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class SaveLoadFile {
 
-    private List<University> db = FXCollections.observableArrayList();
+    private List<Organization> db = FXCollections.observableArrayList();
 
 
     public void dbRead() {this.dbRead("file.xml");}
@@ -35,33 +35,78 @@ public class SaveLoadFile {
             document = builder.build(xmlFile);
             Element rootNode = document.getRootElement();
 
-            List listUniversity = rootNode.getChildren(TagsForFile.university);
+            List listOrganization = rootNode.getChildren(TagsForFile.organization);
 
 
-            for (int i = 0; i < (listUniversity.size()); i++) {
+            for (int i = 0; i < (listOrganization.size()); i++) {
 
-                String faculty ;
-                String department;
-                String fio;
-                String title;
-                String academic;
-                Lecturer lecturerUniversity;
+                  String ID;
+                  String FIO;
+                  String DATE_REG;
+                  String INV;
+                  String BOX_SQ;
+                  String NUM;
+                  String PASP;
+                  String PW;
+                  String PD;
+                  String PN;
+                  String PHONE;
+                  String MAIL;
+                  String ADDRESS;
+                  String ADRREG;
+                  String AUTO;
+                  String IND_DOG;
+                  String INDEX;
 
-                Element university = (Element) listUniversity.get(i);
+                  String SQPR;
+                  String PROC;
+                  String SQ;
+                  String OSAVTO;
+                  String UR;
+                  String OSSPECTR;
+                  String NED_1;
+                  String NED_2;
 
-                faculty = university.getChildText(TagsForFile.faculty);
-                department = university.getChildText(TagsForFile.department);
+                  Owner ownerOrganization;
 
-                List lecturerList = university.getChildren(TagsForFile.lecturer);
+                Element organization = (Element) listOrganization.get(i);
 
-                for (int j = 0; j < lecturerList.size(); j++) {
+                SQPR = organization.getChildText(TagsForFile.SQPR);
+                PROC = organization.getChildText(TagsForFile.PROC);
+                SQ = organization.getChildText(TagsForFile.SQ);
+                OSAVTO = organization.getChildText(TagsForFile.OSAVTO);
+                UR = organization.getChildText(TagsForFile.UR);
+                OSSPECTR = organization.getChildText(TagsForFile.OSSPECTR);
+                NED_1 = organization.getChildText(TagsForFile.NED_1);
+                NED_2 = organization.getChildText(TagsForFile.NED_2);
 
-                    Element lecturer = (Element) lecturerList.get(j);
-                    fio = lecturer.getChildText(TagsForFile.fio);
-                    title = lecturer.getChildText(TagsForFile.title);
-                    academic = lecturer.getChildText(TagsForFile.academic);
-                    lecturerUniversity = new Lecturer(fio,title,academic);
-                    db.add(new University(faculty, department, lecturerUniversity));
+                List ownerList = organization.getChildren(TagsForFile.owner);
+
+                for (int j = 0; j < ownerList.size(); j++) {
+
+                    Element owner = (Element) ownerList.get(j);
+
+                    ID = owner.getChildText(TagsForFile.ID);
+                    FIO = owner.getChildText(TagsForFile.FIO);
+                    DATE_REG = owner.getChildText(TagsForFile.DATE_REG);
+
+                    INV = owner.getChildText(TagsForFile.INV);
+                    BOX_SQ = owner.getChildText(TagsForFile.BOX_SQ);
+                    NUM = owner.getChildText(TagsForFile.NUM);
+                    PASP = owner.getChildText(TagsForFile.PASP);
+                    PW = owner.getChildText(TagsForFile.PW);
+                    PD = owner.getChildText(TagsForFile.PD);
+                    PN = owner.getChildText(TagsForFile.PN);
+                    PHONE = owner.getChildText(TagsForFile.PHONE);
+                    MAIL = owner.getChildText(TagsForFile.MAIL);
+                    ADDRESS = owner.getChildText(TagsForFile.ADDRESS);
+                    ADRREG = owner.getChildText(TagsForFile.ADRREG);
+                    AUTO = owner.getChildText(TagsForFile.AUTO);
+                    IND_DOG = owner.getChildText(TagsForFile.IND_DOG);
+                    INDEX = owner.getChildText(TagsForFile.INDEX);
+
+                    ownerOrganization = new Owner(ID, FIO, DATE_REG, INV, BOX_SQ, NUM, PASP, PW, PD, PN, PHONE, MAIL, ADDRESS, ADRREG, AUTO, IND_DOG, INDEX);
+                    db.add(new Organization(ownerOrganization, SQPR, PROC, SQ, OSAVTO, UR, OSSPECTR, NED_1, NED_2));
                 }
             }
         } catch (JDOMException e) {
@@ -71,58 +116,58 @@ public class SaveLoadFile {
         }
     }
 
-    public void dbWrite() {
-        dbWrite("file.xml");
-    }
+//    public void dbWrite() {
+//        dbWrite("file.xml");
+//    }
 
-    public void dbWrite(String filePath) {
-        try {
-            Element rootNode = new Element(TagsForFile.university);
-            Document doc = new Document(rootNode);
+//    public void dbWrite(String filePath) {
+//        try {
+//            Element rootNode = new Element(TagsForFile.organization);
+//            Document doc = new Document(rootNode);
+//
+//            for (int i = 0; i < db.size(); i++) {
+//                Organization dbOrganization = db.get(i);
+//
+//                Element organization = new Element(TagsForFile.organization);
+//                Element owner = new Element(TagsForFile.owner);
+//
+//                Element faculty = new Element(TagsForFile.faculty).setText(dbOrganization.getFaculty());
+//                Element department = new Element(TagsForFile.department).setText(dbOrganization.getNameOfDepartment());
+//                Element fio = new Element(TagsForFile.fio).setText(dbOrganization.getFio());
+//                Element title = new Element(TagsForFile.title).setText(dbOrganization.getTitle());
+//                Element academic = new Element(TagsForFile.academic).setText(dbOrganization.getAcademicDegree());
+//
+//                organization.addContent(faculty);
+//                organization.addContent(department);
+//
+//                owner.addContent(fio);
+//                owner.addContent(title);
+//                owner.addContent(academic);
+//
+//                organization.addContent(owner);
+//
+//                rootNode.addContent(organization);
+//            }
+//
+//            XMLOutputter xmlOutput = new XMLOutputter();
+//
+//            xmlOutput.setFormat(Format.getPrettyFormat());
+//
+//            xmlOutput.output(doc, new FileWriter(filePath));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
-            for (int i = 0; i < db.size(); i++) {
-                University dbUniversity = db.get(i);
-
-                Element university = new Element(TagsForFile.university);
-                Element lecturer = new Element(TagsForFile.lecturer);
-
-                Element faculty = new Element(TagsForFile.faculty).setText(dbUniversity.getFaculty());
-                Element department = new Element(TagsForFile.department).setText(dbUniversity.getNameOfDepartment());
-                Element fio = new Element(TagsForFile.fio).setText(dbUniversity.getFio());
-                Element title = new Element(TagsForFile.title).setText(dbUniversity.getTitle());
-                Element academic = new Element(TagsForFile.academic).setText(dbUniversity.getAcademicDegree());
-
-                university.addContent(faculty);
-                university.addContent(department);
-
-                lecturer.addContent(fio);
-                lecturer.addContent(title);
-                lecturer.addContent(academic);
-
-                university.addContent(lecturer);
-
-                rootNode.addContent(university);
-            }
-
-            XMLOutputter xmlOutput = new XMLOutputter();
-
-            xmlOutput.setFormat(Format.getPrettyFormat());
-
-            xmlOutput.output(doc, new FileWriter(filePath));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public List<University> getDb() {
+    public List<Organization> getDb() {
         return db;
     }
 
-    public void setDb(ObservableList<University> db) {
+    public void setDb(ObservableList<Organization> db) {
         this.db = db;
     }
 
-    public void setDb(List<University> db) {
+    public void setDb(List<Organization> db) {
         this.db = db;
     }
 }
