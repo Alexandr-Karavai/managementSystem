@@ -1,7 +1,7 @@
 
 package bsuir.controller;
 
-import bsuir.model.University;
+import bsuir.model.Organization;
 import bsuir.view.MyTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,8 +18,8 @@ import javax.swing.*;
 
 public class Components extends HBox
 {
-    private ObservableList<University> allDataU;
-    private ObservableList<University> pageDataU  = FXCollections.observableArrayList();
+    private ObservableList<Organization> allDataU;
+    private ObservableList<Organization> pageDataU  = FXCollections.observableArrayList();
 
     Label textPage = new Label("Номер страницы:");
     Label currentAllPages = new Label ("0/0");
@@ -112,7 +112,7 @@ public class Components extends HBox
     public void setTable(MyTable table)
     {
         myTable = table;
-        allDataU = (ObservableList<University>) table.getDataU();
+        allDataU = (ObservableList<Organization>) table.getDataU();
         allCountRecords = allDataU.size();
         allCountPage = allCountRecords / countRecordsPerPage;
         if (((double)allCountRecords / countRecordsPerPage) > allCountPage) allCountPage++;

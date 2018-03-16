@@ -2,13 +2,13 @@ package bsuir;
 
 public class TagsForFile {
 
-    public static String university = "university";
+    public static String organization = "organization";
     public static String faculty = "faculty";
     public static String department = "department";
     public static String fio = "fio";
     public static String title = "title";
     public static String academic = "academic";
-    public static String lecturer = "lecturer";
+    public static String owner = "owner";
 
     public static String ID = "ID";
     public static String FIO = "FIO";

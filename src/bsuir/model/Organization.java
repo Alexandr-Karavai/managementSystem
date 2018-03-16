@@ -160,6 +160,53 @@ public class Organization {
         owner.setPn(pn);
     }
 
+    public String getPhone() {
+        return owner.getPhone();
+    }
+    public void setPhone(String phone) {
+        owner.setPhone(phone);
+    }
 
+    public String getMail() {
+        return owner.getMail();
+    }
+    public void setMail(String mail) {
+        owner.setMail(mail);
+    }
+
+    public String getAddress() {
+        return owner.getAddress();
+    }
+    public void setAddress(String address) {
+        owner.setAddress(address);
+    }
+
+    public String getAdrreg() {
+        return owner.getAdrreg();
+    }
+    public void setAdrreg(String adrreg) {
+        owner.setAdrreg(adrreg);
+    }
+
+    public String getAuto() {
+        return owner.getAuto();
+    }
+    public void setAuto(String auto) {
+        owner.setAuto(auto);
+    }
+
+    public String getIndDog() {
+        return owner.getIndDog();
+    }
+    public void setIndDog(String ind_dog) {
+        owner.setIndDog(ind_dog);
+    }
+
+    public String getIndex() {
+        return owner.getIndex();
+    }
+    public void setIndex(String index) {
+        owner.setIndex(index);
+    }
 
 }

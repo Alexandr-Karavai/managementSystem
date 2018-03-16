@@ -1,7 +1,7 @@
 package bsuir.view;
 
 import bsuir.model.Lecturer;
-import bsuir.model.University;
+import bsuir.model.Organization;
 import bsuir.view.MenuLine;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,7 +18,7 @@ import java.util.List;
 
 public class AddDialog {
 
-    public void start(final Stage primaryStage, final List<University> allDataU, final MenuLine parentClass) {
+    public void start(final Stage primaryStage, final List<Organization> allDataU, final MenuLine parentClass) {
 
         Pane pane = new Pane();
         //* BorderPane pane = new BorderPane();
@@ -92,13 +92,13 @@ public class AddDialog {
                 facultyLabel, nameOfDepartmentLabel, nameOfDepartmentText, academicLabel, academicBox,
                 titleLabel, titleBox, add);
 
-        add.setOnAction(event -> {
-            Lecturer lecturer = new Lecturer(fioText.getText(),
-                    titleBox.getSelectionModel().getSelectedItem(), academicBox.getSelectionModel().getSelectedItem());
-            allDataU.add(new University(facultyText.getText(), nameOfDepartmentText.getText(),lecturer));
-            parentClass.parentClass.updatePage();
-            primaryStage.close();
-        });
+//        add.setOnAction(event -> {
+//            Lecturer lecturer = new Lecturer(fioText.getText(),
+//                    titleBox.getSelectionModel().getSelectedItem(), academicBox.getSelectionModel().getSelectedItem());
+//            allDataU.add(new Organization(facultyText.getText(), nameOfDepartmentText.getText(),lecturer));
+//            parentClass.parentClass.updatePage();
+//            primaryStage.close();
+//        });
 
     }
 

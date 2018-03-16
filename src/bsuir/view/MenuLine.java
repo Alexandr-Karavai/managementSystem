@@ -2,8 +2,8 @@ package bsuir.view;
 
 import bsuir.Main;
 import bsuir.file.SaveLoadFile;
-import bsuir.file.SearchDelete;
-import bsuir.model.University;
+//import bsuir.file.SearchDelete;
+import bsuir.model.Organization;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 import javafx.scene.control.Menu;
@@ -58,17 +58,17 @@ public class MenuLine extends MenuBar {
         newFile.setOnAction(event -> {
             myTable = new MyTable();
             source.setCenter(myTable);
-            List <University> inU = FXCollections.observableArrayList();
+            List <Organization> inU = FXCollections.observableArrayList();
             myTable.setDataU(inU);
             parentClass.creatingLoadingTable();
         });
 
-        saveFile.setOnAction(event -> {
-            File file1 = fileChooser.showSaveDialog(null);
-            List <University> allDataU = myTable.getDataU();
-            workFile.setDb(allDataU);
-            workFile.dbWrite(file1.getAbsolutePath());
-        });
+//        saveFile.setOnAction(event -> {
+//            File file1 = fileChooser.showSaveDialog(null);
+//            List <Organization> allDataU = myTable.getDataU();
+//            workFile.setDb(allDataU);
+//            workFile.dbWrite(file1.getAbsolutePath());
+//        });
 
         loadFile.setOnAction(event -> {
             File file1 = fileChooser.showOpenDialog(null);
@@ -78,7 +78,7 @@ public class MenuLine extends MenuBar {
                 workFile.dbRead(file1.getAbsolutePath());
                 myTable = new MyTable();
                 source.setCenter(myTable);
-                List  <University> inU = FXCollections.observableArrayList();
+                List  <Organization> inU = FXCollections.observableArrayList();
                 inU.addAll(workFile.getDb());
                 myTable.setDataU(inU);
                 parentClass.creatingLoadingTable();
@@ -96,7 +96,7 @@ public class MenuLine extends MenuBar {
             try
             {
                 Stage stage = new Stage();
-                List <University> allDataU = myTable.getDataU();
+                List <Organization> allDataU = myTable.getDataU();
                 ARDialog.start(stage, allDataU, MenuLine.this);
             }
             catch (Exception e)
@@ -105,20 +105,20 @@ public class MenuLine extends MenuBar {
             }
         });
 
-        findRecord.setOnAction(event -> {
-            try
-            {
-                Stage stage = new Stage();
-                List <University> allData = myTable.getDataU();
-                SearchDelete FRDialog = new SearchDelete();
-                FRDialog.start(stage, allData, MenuLine.this);
-            }
-            catch (Exception e)
-            {
-                JOptionPane.showMessageDialog(null, "Ошибка: Создайте файл!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
-
-            }
-        });
+//        findRecord.setOnAction(event -> {
+//            try
+//            {
+//                Stage stage = new Stage();
+//                List <Organization> allData = myTable.getDataU();
+//                SearchDelete FRDialog = new SearchDelete();
+//                FRDialog.start(stage, allData, MenuLine.this);
+//            }
+//            catch (Exception e)
+//            {
+//                JOptionPane.showMessageDialog(null, "Ошибка: Создайте файл!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
+//
+//            }
+//        });
 
         programm.setOnAction(event -> {
             try
