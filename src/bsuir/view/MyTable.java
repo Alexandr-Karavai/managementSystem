@@ -1,6 +1,5 @@
 package bsuir.view;
 
-
 import bsuir.model.Organization;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,13 +15,10 @@ public class MyTable extends TableView {
 
     private List<Organization> usersData = FXCollections.observableArrayList();
 
-
-
-
     public MyTable()
     {
 
-        this.setEditable(true);
+        this.setEditable(false);
 
         TableColumn idColumn = new TableColumn("ID");
             idColumn.setPrefWidth(100.0);
@@ -102,19 +98,6 @@ public class MyTable extends TableView {
         /**
          * //////////////////////////////////////////////////////////////////////////////////
          */
-
-
-//        TableColumn nameOfDepartmentColumn = new TableColumn("Название кафедры");
-//        nameOfDepartmentColumn.setPrefWidth(170.0);
-//
-//
-//
-//        TableColumn titleColumn = new TableColumn("Ученое звание");
-//            titleColumn.setPrefWidth(220.0);
-//
-//        TableColumn academicDegreeColumn = new TableColumn("Ученая степень");
-//            academicDegreeColumn.setPrefWidth(220.0);
-
 
         idColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("id"));
         idColumn.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -346,25 +329,6 @@ public class MyTable extends TableView {
          * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
          */
 
-
-//        titleColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("title"));
-//        titleColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-//        titleColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
-//            @Override
-//            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-//                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setTitle(studentsStringCellEditEvent.getNewValue());
-//            }
-//        });
-//
-//        academicDegreeColumn.setCellValueFactory(new PropertyValueFactory<Organization, String>("academicDegree"));
-//        academicDegreeColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-//        academicDegreeColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
-//            @Override
-//            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-//                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setAcademicDegree(studentsStringCellEditEvent.getNewValue());
-//            }
-//        });
-
         this.getColumns().addAll(idColumn, fioColumn, dateRegColumn, invColumn, boxSqColumn, numColumn, paspColumn, pwColumn, pdColumn, pnColumn, phoneColumn,
                 mailColumn, addressColumn, adrregColumn, autoColumn, indDogColumn, indexColumn, sqprColumn, procColumn,
                 sqColumn, osavtoColumn, urColumn, osspectrColumn, nedOneColumn, nedTwoColumn);
@@ -373,11 +337,11 @@ public class MyTable extends TableView {
 
     }
 
-
     public List<Organization> getDataU()
     {
         return this.usersData;
     }
+
     public void setDataU(List <Organization> inU)
     {
         this.usersData = inU;

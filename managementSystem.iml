@@ -18,5 +18,7 @@
     </orderEntry>
     <orderEntry type="library" exported="" name="jdom-2.0.6" level="project" />
     <orderEntry type="library" name="org.jdom:jdom2:2.0.6" level="project" />
+    <orderEntry type="library" name="org.apache.poi:poi-scratchpad:3.11" level="project" />
+    <orderEntry type="library" name="org.apache.poi:poi:3.11" level="project" />
   </component>
 </module>
