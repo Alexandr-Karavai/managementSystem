@@ -3,6 +3,7 @@ package bsuir.file;
 import bsuir.model.Organization;
 import bsuir.view.MyTable;
 import javafx.collections.FXCollections;
+import javafx.scene.control.Alert;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.usermodel.Range;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
@@ -54,8 +55,11 @@ public class GenDocFile {
             out.close();
         }
         catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Ошибка: Откройте файл!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Ошибка");
+            alert.setContentText("");
+            alert.setHeaderText("Ошибка: Откройте файл!");
+            alert.showAndWait();
         }
     }
 

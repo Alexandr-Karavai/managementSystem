@@ -7,6 +7,7 @@ import bsuir.file.SaveLoadFile;
 import bsuir.model.Organization;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -110,20 +111,20 @@ public class MenuLine extends MenuBar {
             }
         });
 
-        addRecord.setOnAction(event -> {
-
-            AddDialog ARDialog = new AddDialog();
-            try
-            {
-                Stage stage = new Stage();
-                List <Organization> allDataU = myTable.getDataU();
-                ARDialog.start(stage, allDataU, MenuLine.this);
-            }
-            catch (Exception e)
-            {
-                JOptionPane.showMessageDialog (null, "Ошибка: Создайте файл!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
-            }
-        });
+//        addRecord.setOnAction(event -> {
+//
+//            AddDialog ARDialog = new AddDialog();
+//            try
+//            {
+//                Stage stage = new Stage();
+//                List <Organization> allDataU = myTable.getDataU();
+//                ARDialog.start(stage, allDataU, MenuLine.this);
+//            }
+//            catch (Exception e)
+//            {
+//                JOptionPane.showMessageDialog (null, "Ошибка: Создайте файл!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
+//            }
+//        });
 
 //        findRecord.setOnAction(event -> {
 //            try
@@ -173,12 +174,17 @@ public class MenuLine extends MenuBar {
         info.setOnAction(event -> {
             try
             {
-                JOptionPane.showMessageDialog(null,
-                        new String[] {"ИИТ - БГУИР",
-                                "\"Система управления общим недвижимым имуществом\"",
-                                "© 2018 г., Александр Каравай, Андрей Ольховый, Иван Райкевич"},
-                        "О программе",
-                        JOptionPane.INFORMATION_MESSAGE);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("О программе");
+                alert.setContentText("\"© 2018 г., Александр Каравай, Андрей Ольховый, Иван Райкевич\"");
+                alert.setHeaderText("ИИТ - БГУИР Система управления общим недвижимым имуществом ");
+                alert.showAndWait();
+//                JOptionPane.showMessageDialog(null,
+//                        new String[] {"ИИТ - БГУИР",
+//                                "\"Система управления общим недвижимым имуществом\"",
+//                                "© 2018 г., Александр Каравай, Андрей Ольховый, Иван Райкевич"},
+//                        "О программе",
+//                        JOptionPane.INFORMATION_MESSAGE);
             }
             catch (Exception e)
             {
