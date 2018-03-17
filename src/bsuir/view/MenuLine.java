@@ -1,6 +1,7 @@
 package bsuir.view;
 
 import bsuir.Main;
+import bsuir.file.GenDocFile;
 import bsuir.file.SaveLoadFile;
 //import bsuir.file.SearchDelete;
 import bsuir.model.Organization;
@@ -24,6 +25,10 @@ public class MenuLine extends MenuBar {
     BorderPane source;
     public Main parentClass;
     public MyTable myTable;
+    public GenDocFile genFile;
+
+    List <Organization> inU = FXCollections.observableArrayList();
+
 
     public MenuLine(BorderPane source, Main parentClass)
     {
@@ -35,9 +40,10 @@ public class MenuLine extends MenuBar {
     {
         Menu file = new Menu("Файл");
         Menu actions = new Menu("Редактировать");
+        Menu documents = new Menu("Документы");
         Menu about = new Menu ("Справка");
 
-        this.getMenus().addAll(file, actions, about);
+        this.getMenus().addAll(file, actions, documents, about);
 
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Открытие файла");
@@ -49,11 +55,26 @@ public class MenuLine extends MenuBar {
         MenuItem saveFile = new MenuItem("Сохранить");
         MenuItem addRecord = new MenuItem("Добавить");
         MenuItem findRecord = new MenuItem("Найти/Удалить");
-        MenuItem programm = new MenuItem ("О программе");
+
+        Menu statement = new Menu("Заявление");
+        Menu bulletin = new Menu("Бюллетень");
+
+        MenuItem genStatement = new MenuItem("Создать заявление");
+        MenuItem gen_statements = new MenuItem("Создать для всех");
+
+        MenuItem genBulletin = new MenuItem("Создать бюллетень");
+        MenuItem gen_bulletins = new MenuItem("Создать для всех");
+
+        MenuItem info = new MenuItem ("О программе");
 
         file.getItems().addAll(newFile, loadFile, saveFile);
         actions.getItems().addAll(addRecord, findRecord);
-        about.getItems().addAll(programm);
+        documents.getItems().addAll(statement, bulletin);
+
+        statement.getItems().addAll(genStatement, gen_statements);
+        bulletin.getItems().addAll(genBulletin, gen_bulletins);
+
+        about.getItems().addAll(info);
 
         newFile.setOnAction(event -> {
             myTable = new MyTable();
@@ -78,7 +99,6 @@ public class MenuLine extends MenuBar {
                 workFile.dbRead(file1.getAbsolutePath());
                 myTable = new MyTable();
                 source.setCenter(myTable);
-                List  <Organization> inU = FXCollections.observableArrayList();
                 inU.addAll(workFile.getDb());
                 myTable.setDataU(inU);
                 parentClass.creatingLoadingTable();
@@ -120,13 +140,43 @@ public class MenuLine extends MenuBar {
 //            }
 //        });
 
-        programm.setOnAction(event -> {
+        genStatement.setOnAction(event -> {
+            try
+            {
+                genFile = new GenDocFile();
+                genFile.genStatement(inU, myTable);
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "Ошибка: Перезапустите программу!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
+
+            }
+
+
+        });
+
+        genBulletin.setOnAction(event -> {
+            try
+            {
+                genFile = new GenDocFile();
+                genFile.genBulletin(inU, myTable);
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "Ошибка: Перезапустите программу!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
+
+            }
+
+
+        });
+
+        info.setOnAction(event -> {
             try
             {
                 JOptionPane.showMessageDialog(null,
                         new String[] {"ИИТ - БГУИР",
                                 "\"Система управления общим недвижимым имуществом\"",
-                                "© 2018 г., Александр Каравай"},
+                                "© 2018 г., Александр Каравай, Андрей Ольховый, Иван Райкевич"},
                         "О программе",
                         JOptionPane.INFORMATION_MESSAGE);
             }
