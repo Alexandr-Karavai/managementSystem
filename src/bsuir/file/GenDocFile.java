@@ -106,7 +106,11 @@ public class GenDocFile {
         }
         catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Ошибка: Откройте файл!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Ошибка");
+            alert.setContentText("");
+            alert.setHeaderText("Ошибка: Откройте файл!");
+            alert.showAndWait();
         }
     }
 }

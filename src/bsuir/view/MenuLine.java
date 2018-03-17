@@ -3,20 +3,16 @@ package bsuir.view;
 import bsuir.Main;
 import bsuir.file.GenDocFile;
 import bsuir.file.SaveLoadFile;
-//import bsuir.file.SearchDelete;
 import bsuir.model.Organization;
+
 import javafx.collections.FXCollections;
-import javafx.geometry.Insets;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.File;
 import java.util.List;
 
@@ -106,7 +102,11 @@ public class MenuLine extends MenuBar {
             }
             catch (Exception e)
             {
-                JOptionPane.showMessageDialog(null, "Файл не был выбран", "Ошибка", JOptionPane.ERROR_MESSAGE);
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Предупреждение");
+                alert.setContentText("");
+                alert.setHeaderText("Предупреждение: Файл не был выбран!");
+                alert.showAndWait();
                 e.printStackTrace();
             }
         });
@@ -149,8 +149,11 @@ public class MenuLine extends MenuBar {
             }
             catch (Exception e)
             {
-                JOptionPane.showMessageDialog(null, "Ошибка: Перезапустите программу!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
-
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Перезапустите программу!");
+                alert.showAndWait();
             }
 
 
@@ -164,11 +167,12 @@ public class MenuLine extends MenuBar {
             }
             catch (Exception e)
             {
-                JOptionPane.showMessageDialog(null, "Ошибка: Перезапустите программу!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
-
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Перезапустите программу!");
+                alert.showAndWait();
             }
-
-
         });
 
         info.setOnAction(event -> {
@@ -176,31 +180,19 @@ public class MenuLine extends MenuBar {
             {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("О программе");
-                alert.setContentText("\"© 2018 г., Александр Каравай, Андрей Ольховый, Иван Райкевич\"");
-                alert.setHeaderText("ИИТ - БГУИР Система управления общим недвижимым имуществом ");
+                alert.setContentText("\"© 2018 ИИТ - БГУИР, Александр Каравай, Андрей Ольховый, Иван Райкевич\"");
+                alert.setHeaderText("Система управления общим недвижимым имуществом");
                 alert.showAndWait();
-//                JOptionPane.showMessageDialog(null,
-//                        new String[] {"ИИТ - БГУИР",
-//                                "\"Система управления общим недвижимым имуществом\"",
-//                                "© 2018 г., Александр Каравай, Андрей Ольховый, Иван Райкевич"},
-//                        "О программе",
-//                        JOptionPane.INFORMATION_MESSAGE);
             }
             catch (Exception e)
             {
-                JOptionPane.showMessageDialog(null, "Ошибка: Перезапустите программу!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
-
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Перезапустите программу!");
+                alert.showAndWait();
             }
-
-
         });
 
     }
-
-
-
-
-
-
-
 }
