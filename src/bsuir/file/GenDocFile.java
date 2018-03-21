@@ -113,4 +113,47 @@ public class GenDocFile {
             alert.showAndWait();
         }
     }
+
+    public void genStatementGSPK(List<Organization> db, MyTable myTable) {
+
+        this.db = db;
+        this.myTable = myTable;
+
+        String filename = "documents/templates/Заявление_шаблон_ГСПК.doc";
+        POIFSFileSystem fs = null;
+
+        List <Organization> allOwner = this.db;
+
+        try {
+
+            fs = new POIFSFileSystem(new FileInputStream(filename));
+            HWPFDocument doc = new HWPFDocument(fs);
+
+            Range range = doc.getRange();
+
+            Organization owner = allOwner.get(myTable.getSelectionModel().getSelectedIndex());
+
+            range.replaceText("%FIO%", owner.getId());
+            range.replaceText("FAMILY", owner.getFio());
+            range.replaceText("ADDRESS", owner.getAddress());
+            range.replaceText("PHONE", owner.getPhone());
+            range.replaceText("MAIL", owner.getMail());
+            range.replaceText("IND_DOG", owner.getIndDog());
+            range.replaceText("INDEX", owner.getIndex());
+            range.replaceText("BOX_SQ", owner.getBoxSq());
+
+            OutputStream out = new FileOutputStream("documents/gen_statement_GSPK/Заявление_ГСПК_"+owner.getFio()+".doc");
+            doc.write(out);
+
+            out.flush();
+            out.close();
+        }
+        catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Ошибка");
+            alert.setContentText("");
+            alert.setHeaderText("Ошибка: Откройте файл!");
+            alert.showAndWait();
+        }
+    }
 }
