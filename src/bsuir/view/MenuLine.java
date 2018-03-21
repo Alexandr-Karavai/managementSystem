@@ -49,15 +49,19 @@ public class MenuLine extends MenuBar {
 
         final MenuItem newFile = new MenuItem("Новый реестр");
         MenuItem loadFile = new MenuItem("Открыть");
-        MenuItem saveFile = new MenuItem("Сохранить");
+        MenuItem saveFile = new MenuItem("Сохранить как");
         MenuItem addRecord = new MenuItem("Добавить");
         MenuItem findRecord = new MenuItem("Найти/Удалить");
 
         Menu statement = new Menu("Заявление");
+        Menu statementGSPK = new Menu("Заявление ГСПК");
         Menu bulletin = new Menu("Бюллетень");
 
         MenuItem genStatement = new MenuItem("Создать заявление");
         MenuItem gen_statements = new MenuItem("Создать для всех");
+
+        MenuItem genStatementGSPK = new MenuItem("Создать заявление ГСПК");
+        MenuItem gen_statementsGSPK = new MenuItem("Создать для всех");
 
         MenuItem genBulletin = new MenuItem("Создать бюллетень");
         MenuItem gen_bulletins = new MenuItem("Создать для всех");
@@ -66,9 +70,10 @@ public class MenuLine extends MenuBar {
 
         file.getItems().addAll(newFile, loadFile, saveFile);
         actions.getItems().addAll(addRecord, findRecord);
-        documents.getItems().addAll(statement, bulletin);
+        documents.getItems().addAll(statement, statementGSPK, bulletin);
 
         statement.getItems().addAll(genStatement, gen_statements);
+        statementGSPK.getItems().addAll(genStatementGSPK, gen_statementsGSPK);
         bulletin.getItems().addAll(genBulletin, gen_bulletins);
 
         about.getItems().addAll(info);
@@ -81,12 +86,12 @@ public class MenuLine extends MenuBar {
             parentClass.creatingLoadingTable();
         });
 
-//        saveFile.setOnAction(event -> {
-//            File file1 = fileChooser.showSaveDialog(null);
-//            List <Organization> allDataU = myTable.getDataU();
-//            workFile.setDb(allDataU);
-//            workFile.dbWrite(file1.getAbsolutePath());
-//        });
+        saveFile.setOnAction(event -> {
+            File file1 = fileChooser.showSaveDialog(null);
+            List <Organization> allDataU = myTable.getDataU();
+            workFile.setDb(allDataU);
+            workFile.dbWrite(file1.getAbsolutePath());
+        });
 
         loadFile.setOnAction(event -> {
             File file1 = fileChooser.showOpenDialog(null);
@@ -146,6 +151,24 @@ public class MenuLine extends MenuBar {
             {
                 genFile = new GenDocFile();
                 genFile.genStatement(inU, myTable);
+            }
+            catch (Exception e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Перезапустите программу!");
+                alert.showAndWait();
+            }
+
+
+        });
+
+        genStatementGSPK.setOnAction(event -> {
+            try
+            {
+                genFile = new GenDocFile();
+                genFile.genStatementGSPK(inU, myTable);
             }
             catch (Exception e)
             {
