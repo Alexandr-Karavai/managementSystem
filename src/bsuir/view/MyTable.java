@@ -65,10 +65,10 @@ public class MyTable extends TableView {
         TableColumn autoColumn = new TableColumn("Авто");
             autoColumn.setPrefWidth(100.0);
 
-        TableColumn indDogColumn = new TableColumn("Индекс города");
+        TableColumn indDogColumn = new TableColumn("Номер договора");
             indDogColumn.setPrefWidth(100.0);
 
-        TableColumn indexColumn = new TableColumn("Индекс");
+        TableColumn indexColumn = new TableColumn("Дата заключения");
             indexColumn.setPrefWidth(100.0);
 
         TableColumn sqprColumn = new TableColumn("SQPR");
@@ -103,8 +103,8 @@ public class MyTable extends TableView {
         idColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         idColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setId(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setId(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -112,8 +112,8 @@ public class MyTable extends TableView {
         fioColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         fioColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setFio(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setFio(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -121,8 +121,8 @@ public class MyTable extends TableView {
         dateRegColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         dateRegColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setDateReg(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setDateReg(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -130,8 +130,8 @@ public class MyTable extends TableView {
         invColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         invColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setInv(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setInv(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -139,8 +139,8 @@ public class MyTable extends TableView {
         boxSqColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         boxSqColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setBoxSq(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setBoxSq(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -148,8 +148,8 @@ public class MyTable extends TableView {
         numColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         numColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNum(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setNum(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -157,8 +157,8 @@ public class MyTable extends TableView {
         paspColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         paspColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPasp(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setPasp(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -166,8 +166,8 @@ public class MyTable extends TableView {
         pwColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         pwColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPw(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setPw(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -175,8 +175,8 @@ public class MyTable extends TableView {
         pdColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         pdColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPd(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setPd(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -184,8 +184,8 @@ public class MyTable extends TableView {
         pnColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         pnColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPn(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setPn(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -193,8 +193,8 @@ public class MyTable extends TableView {
         phoneColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         phoneColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setPhone(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setPhone(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -202,8 +202,8 @@ public class MyTable extends TableView {
         mailColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         mailColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setMail(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setMail(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -211,8 +211,8 @@ public class MyTable extends TableView {
         addressColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         addressColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setAddress(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setAddress(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -220,8 +220,8 @@ public class MyTable extends TableView {
         adrregColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         adrregColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setAdrreg(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setAdrreg(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -229,8 +229,8 @@ public class MyTable extends TableView {
         autoColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         autoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setAuto(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setAuto(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -238,8 +238,8 @@ public class MyTable extends TableView {
         indDogColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         indDogColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setIndDog(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setIndDog(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -247,8 +247,8 @@ public class MyTable extends TableView {
         indexColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         indexColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setIndex(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setIndex(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -256,8 +256,8 @@ public class MyTable extends TableView {
         sqprColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         sqprColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setSqpr(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setSqpr(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -265,8 +265,8 @@ public class MyTable extends TableView {
         procColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         procColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setProc(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setProc(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -274,8 +274,8 @@ public class MyTable extends TableView {
         sqColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         sqColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setSq(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setSq(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -283,8 +283,8 @@ public class MyTable extends TableView {
         osavtoColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         osavtoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setOsavto(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setOsavto(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -292,8 +292,8 @@ public class MyTable extends TableView {
         urColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         urColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setUr(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setUr(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -301,8 +301,8 @@ public class MyTable extends TableView {
         osspectrColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         osspectrColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setOsspectr(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setOsspectr(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -310,8 +310,8 @@ public class MyTable extends TableView {
         nedOneColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         nedOneColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNed_1(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setNed_1(ownersStringCellEditEvent.getNewValue());
             }
         });
 
@@ -319,8 +319,8 @@ public class MyTable extends TableView {
         nedTwoColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         nedTwoColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Organization, String>>() {
             @Override
-            public void handle(TableColumn.CellEditEvent<Organization, String> studentsStringCellEditEvent) {
-                studentsStringCellEditEvent.getTableView().getItems().get(studentsStringCellEditEvent.getTablePosition().getRow()).setNed_2(studentsStringCellEditEvent.getNewValue());
+            public void handle(TableColumn.CellEditEvent<Organization, String> ownersStringCellEditEvent) {
+                ownersStringCellEditEvent.getTableView().getItems().get(ownersStringCellEditEvent.getTablePosition().getRow()).setNed_2(ownersStringCellEditEvent.getNewValue());
             }
         });
 
