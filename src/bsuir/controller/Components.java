@@ -55,7 +55,7 @@ public class Components extends HBox
     public Components() {
 
         nlPage.setSpacing(5);
-        nlPage.getChildren().addAll(nextPage, previousPage);
+        nlPage.getChildren().addAll(previousPage, nextPage);
 
         lastFirst.setSpacing(5);
         lastFirst.getChildren().addAll(firstPage, lastPage);
