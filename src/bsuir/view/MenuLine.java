@@ -97,7 +97,6 @@ public class MenuLine extends MenuBar {
             File file1 = fileChooser.showOpenDialog(null);
             try
             {
-
                 workFile.dbRead(file1.getAbsolutePath());
                 myTable = new MyTable();
                 source.setCenter(myTable);
@@ -164,6 +163,24 @@ public class MenuLine extends MenuBar {
 
         });
 
+            gen_statements.setOnAction(event -> {
+            try
+            {
+                genFile = new GenDocFile();
+                genFile.genStatements(inU, myTable);
+            }
+            catch (Exception e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Перезапустите программу!");
+                alert.showAndWait();
+            }
+
+
+        });
+
         genStatementGSPK.setOnAction(event -> {
             try
             {
@@ -182,11 +199,45 @@ public class MenuLine extends MenuBar {
 
         });
 
+        gen_statementsGSPK.setOnAction(event -> {
+            try
+            {
+                genFile = new GenDocFile();
+                genFile.genStatementsGSPK(inU, myTable);
+            }
+            catch (Exception e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка #2");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Перезапустите программу!");
+                alert.showAndWait();
+            }
+
+
+        });
+
         genBulletin.setOnAction(event -> {
             try
             {
                 genFile = new GenDocFile();
                 genFile.genBulletin(inU, myTable);
+            }
+            catch (Exception e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Перезапустите программу!");
+                alert.showAndWait();
+            }
+        });
+
+        gen_bulletins.setOnAction(event -> {
+            try
+            {
+                genFile = new GenDocFile();
+                genFile.genBulletins(inU, myTable);
             }
             catch (Exception e)
             {
