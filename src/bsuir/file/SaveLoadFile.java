@@ -28,7 +28,7 @@ public class SaveLoadFile {
     public void dbRead(String filePath) {
         db.clear();
         SAXBuilder builder = new SAXBuilder();
-        File xmlFile = new File(filePath);
+        File xmlFile       = new File(filePath);
         Document document;
         try {
 
@@ -71,14 +71,14 @@ public class SaveLoadFile {
 
                 Element organization = (Element) listOrganization.get(i);
 
-                SQPR = organization.getChildText(TagsForFile.SQPR);
-                PROC = organization.getChildText(TagsForFile.PROC);
-                SQ = organization.getChildText(TagsForFile.SQ);
-                OSAVTO = organization.getChildText(TagsForFile.OSAVTO);
-                UR = organization.getChildText(TagsForFile.UR);
-                OSSPECTR = organization.getChildText(TagsForFile.OSSPECTR);
-                NED_1 = organization.getChildText(TagsForFile.NED_1);
-                NED_2 = organization.getChildText(TagsForFile.NED_2);
+                SQPR       =    organization.getChildText(TagsForFile.SQPR);
+                PROC       =    organization.getChildText(TagsForFile.PROC);
+                SQ         =    organization.getChildText(TagsForFile.SQ);
+                OSAVTO     =    organization.getChildText(TagsForFile.OSAVTO);
+                UR         =    organization.getChildText(TagsForFile.UR);
+                OSSPECTR   =    organization.getChildText(TagsForFile.OSSPECTR);
+                NED_1      =    organization.getChildText(TagsForFile.NED_1);
+                NED_2      =    organization.getChildText(TagsForFile.NED_2);
 
                 List ownerList = organization.getChildren(TagsForFile.owner);
 
@@ -86,24 +86,23 @@ public class SaveLoadFile {
 
                     Element owner = (Element) ownerList.get(j);
 
-                    ID = owner.getChildText(TagsForFile.ID);
-                    FIO = owner.getChildText(TagsForFile.FIO);
-                    DATE_REG = owner.getChildText(TagsForFile.DATE_REG);
-
-                    INV = owner.getChildText(TagsForFile.INV);
-                    BOX_SQ = owner.getChildText(TagsForFile.BOX_SQ);
-                    NUM = owner.getChildText(TagsForFile.NUM);
-                    PASP = owner.getChildText(TagsForFile.PASP);
-                    PW = owner.getChildText(TagsForFile.PW);
-                    PD = owner.getChildText(TagsForFile.PD);
-                    PN = owner.getChildText(TagsForFile.PN);
-                    PHONE = owner.getChildText(TagsForFile.PHONE);
-                    MAIL = owner.getChildText(TagsForFile.MAIL);
-                    ADDRESS = owner.getChildText(TagsForFile.ADDRESS);
-                    ADRREG = owner.getChildText(TagsForFile.ADRREG);
-                    AUTO = owner.getChildText(TagsForFile.AUTO);
-                    IND_DOG = owner.getChildText(TagsForFile.IND_DOG);
-                    INDEX = owner.getChildText(TagsForFile.INDEX);
+                    ID         =    owner.getChildText(TagsForFile.ID);
+                    FIO        =    owner.getChildText(TagsForFile.FIO);
+                    DATE_REG   =    owner.getChildText(TagsForFile.DATE_REG);
+                    INV        =    owner.getChildText(TagsForFile.INV);
+                    BOX_SQ     =    owner.getChildText(TagsForFile.BOX_SQ);
+                    NUM        =    owner.getChildText(TagsForFile.NUM);
+                    PASP       =    owner.getChildText(TagsForFile.PASP);
+                    PW         =    owner.getChildText(TagsForFile.PW);
+                    PD         =    owner.getChildText(TagsForFile.PD);
+                    PN         =    owner.getChildText(TagsForFile.PN);
+                    PHONE      =    owner.getChildText(TagsForFile.PHONE);
+                    MAIL       =    owner.getChildText(TagsForFile.MAIL);
+                    ADDRESS    =    owner.getChildText(TagsForFile.ADDRESS);
+                    ADRREG     =    owner.getChildText(TagsForFile.ADRREG);
+                    AUTO       =    owner.getChildText(TagsForFile.AUTO);
+                    IND_DOG    =    owner.getChildText(TagsForFile.IND_DOG);
+                    INDEX      =    owner.getChildText(TagsForFile.INDEX);
 
                     ownerOrganization = new Owner(ID, FIO, DATE_REG, INV, BOX_SQ, NUM, PASP, PW, PD, PN, PHONE, MAIL, ADDRESS, ADRREG, AUTO, IND_DOG, INDEX);
                     db.add(new Organization(ownerOrganization, SQPR, PROC, SQ, OSAVTO, UR, OSSPECTR, NED_1, NED_2));
@@ -129,33 +128,33 @@ public class SaveLoadFile {
                 Organization dbOrganization = db.get(i);
 
                 Element organization = new Element(TagsForFile.organization);
-                Element owner = new Element(TagsForFile.owner);
+                Element owner        = new Element(TagsForFile.owner);
 
-                Element ID = new Element(TagsForFile.ID).setText(dbOrganization.getId());
-                Element FIO = new Element(TagsForFile.FIO).setText(dbOrganization.getFio());
-                Element DATE_REG = new Element(TagsForFile.DATE_REG).setText(dbOrganization.getDateReg());
-                Element INV = new Element(TagsForFile.INV).setText(dbOrganization.getInv());
-                Element BOX_SQ = new Element(TagsForFile.BOX_SQ).setText(dbOrganization.getBoxSq());
-                Element NUM = new Element(TagsForFile.NUM).setText(dbOrganization.getNum());
-                Element PASP = new Element(TagsForFile.PASP).setText(dbOrganization.getPasp());
-                Element PW = new Element(TagsForFile.PW).setText(dbOrganization.getPw());
-                Element PD = new Element(TagsForFile.PD).setText(dbOrganization.getPd());
-                Element PN = new Element(TagsForFile.PN).setText(dbOrganization.getPn());
-                Element PHONE = new Element(TagsForFile.PHONE).setText(dbOrganization.getPhone());
-                Element MAIL = new Element(TagsForFile.MAIL).setText(dbOrganization.getMail());
-                Element ADDRESS = new Element(TagsForFile.ADDRESS).setText(dbOrganization.getAddress());
-                Element ADRREG = new Element(TagsForFile.ADRREG).setText(dbOrganization.getAdrreg());
-                Element AUTO = new Element(TagsForFile.AUTO).setText(dbOrganization.getAuto());
-                Element IND_DOG = new Element(TagsForFile.IND_DOG).setText(dbOrganization.getIndDog());
-                Element INDEX = new Element(TagsForFile.INDEX).setText(dbOrganization.getIndex());
-                Element SQPR = new Element(TagsForFile.SQPR).setText(dbOrganization.getSqpr());
-                Element PROC = new Element(TagsForFile.PROC).setText(dbOrganization.getProc());
-                Element SQ = new Element(TagsForFile.SQ).setText(dbOrganization.getSq());
-                Element OSAVTO = new Element(TagsForFile.OSAVTO).setText(dbOrganization.getOsavto());
-                Element UR = new Element(TagsForFile.UR).setText(dbOrganization.getUr());
-                Element OSSPECTR = new Element(TagsForFile.OSSPECTR).setText(dbOrganization.getOsspectr());
-                Element NED_1 = new Element(TagsForFile.NED_1).setText(dbOrganization.getNed_1());
-                Element NED_2 = new Element(TagsForFile.NED_2).setText(dbOrganization.getNed_2());
+                Element ID         =    new Element(TagsForFile.ID).setText(dbOrganization.getId());
+                Element FIO        =    new Element(TagsForFile.FIO).setText(dbOrganization.getFio());
+                Element DATE_REG   =    new Element(TagsForFile.DATE_REG).setText(dbOrganization.getDateReg());
+                Element INV        =    new Element(TagsForFile.INV).setText(dbOrganization.getInv());
+                Element BOX_SQ     =    new Element(TagsForFile.BOX_SQ).setText(dbOrganization.getBoxSq());
+                Element NUM        =    new Element(TagsForFile.NUM).setText(dbOrganization.getNum());
+                Element PASP       =    new Element(TagsForFile.PASP).setText(dbOrganization.getPasp());
+                Element PW         =    new Element(TagsForFile.PW).setText(dbOrganization.getPw());
+                Element PD         =    new Element(TagsForFile.PD).setText(dbOrganization.getPd());
+                Element PN         =    new Element(TagsForFile.PN).setText(dbOrganization.getPn());
+                Element PHONE      =    new Element(TagsForFile.PHONE).setText(dbOrganization.getPhone());
+                Element MAIL       =    new Element(TagsForFile.MAIL).setText(dbOrganization.getMail());
+                Element ADDRESS    =    new Element(TagsForFile.ADDRESS).setText(dbOrganization.getAddress());
+                Element ADRREG     =    new Element(TagsForFile.ADRREG).setText(dbOrganization.getAdrreg());
+                Element AUTO       =    new Element(TagsForFile.AUTO).setText(dbOrganization.getAuto());
+                Element IND_DOG    =    new Element(TagsForFile.IND_DOG).setText(dbOrganization.getIndDog());
+                Element INDEX      =    new Element(TagsForFile.INDEX).setText(dbOrganization.getIndex());
+                Element SQPR       =    new Element(TagsForFile.SQPR).setText(dbOrganization.getSqpr());
+                Element PROC       =    new Element(TagsForFile.PROC).setText(dbOrganization.getProc());
+                Element SQ         =    new Element(TagsForFile.SQ).setText(dbOrganization.getSq());
+                Element OSAVTO     =    new Element(TagsForFile.OSAVTO).setText(dbOrganization.getOsavto());
+                Element UR         =    new Element(TagsForFile.UR).setText(dbOrganization.getUr());
+                Element OSSPECTR   =    new Element(TagsForFile.OSSPECTR).setText(dbOrganization.getOsspectr());
+                Element NED_1      =    new Element(TagsForFile.NED_1).setText(dbOrganization.getNed_1());
+                Element NED_2      =    new Element(TagsForFile.NED_2).setText(dbOrganization.getNed_2());
 
                 owner.addContent(ID);
                 owner.addContent(FIO);
