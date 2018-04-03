@@ -12,6 +12,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.List;
@@ -38,9 +39,10 @@ public class MenuLine extends MenuBar {
         Menu file = new Menu("Файл");
         Menu actions = new Menu("Редактировать");
         Menu documents = new Menu("Документы");
+        Menu genTable = new Menu("Таблица");
         Menu about = new Menu ("Справка");
 
-        this.getMenus().addAll(file, actions, documents, about);
+        this.getMenus().addAll(file, actions, documents, genTable, about);
 
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Открытие файла");
@@ -66,6 +68,8 @@ public class MenuLine extends MenuBar {
         MenuItem genBulletin = new MenuItem("Создать бюллетень");
         MenuItem gen_bulletins = new MenuItem("Создать для всех");
 
+        MenuItem addDocTable = new MenuItem("Создать таблицу");
+
         MenuItem info = new MenuItem ("О программе");
 
         file.getItems().addAll(newFile, loadFile, saveFile);
@@ -75,6 +79,8 @@ public class MenuLine extends MenuBar {
         statement.getItems().addAll(genStatement, gen_statements);
         statementGSPK.getItems().addAll(genStatementGSPK, gen_statementsGSPK);
         bulletin.getItems().addAll(genBulletin, gen_bulletins);
+
+        genTable.getItems().addAll(addDocTable);
 
         about.getItems().addAll(info);
 
@@ -115,20 +121,24 @@ public class MenuLine extends MenuBar {
             }
         });
 
-//        addRecord.setOnAction(event -> {
-//
-//            AddDialog ARDialog = new AddDialog();
-//            try
-//            {
-//                Stage stage = new Stage();
-//                List <Organization> allDataU = myTable.getDataU();
-//                ARDialog.start(stage, allDataU, MenuLine.this);
-//            }
-//            catch (Exception e)
-//            {
-//                JOptionPane.showMessageDialog (null, "Ошибка: Создайте файл!", "Ошибка" , JOptionPane.ERROR_MESSAGE);
-//            }
-//        });
+        addRecord.setOnAction(event -> {
+
+            AddDialog ARDialog = new AddDialog();
+            try
+            {
+                Stage stage = new Stage();
+                List <Organization> allDataU = myTable.getDataU();
+                ARDialog.start(stage, allDataU, MenuLine.this);
+            }
+            catch (Exception e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Создайте файл!");
+                alert.showAndWait();
+            }
+        });
 
 //        findRecord.setOnAction(event -> {
 //            try
@@ -245,6 +255,25 @@ public class MenuLine extends MenuBar {
                 alert.setTitle("Ошибка");
                 alert.setContentText("");
                 alert.setHeaderText("Ошибка: Перезапустите программу!");
+                alert.showAndWait();
+            }
+        });
+
+        addDocTable.setOnAction(event -> {
+
+            GenDocTable GDTable = new GenDocTable();
+            try
+            {
+                Stage stage = new Stage();
+                List <Organization> allDataU = myTable.getDataU();
+                GDTable.start(stage, allDataU, MenuLine.this);
+            }
+            catch (Exception e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Создайте файл!");
                 alert.showAndWait();
             }
         });
