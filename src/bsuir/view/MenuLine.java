@@ -6,10 +6,8 @@ import bsuir.file.SaveLoadFile;
 import bsuir.model.Organization;
 
 import javafx.collections.FXCollections;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -49,24 +47,19 @@ public class MenuLine extends MenuBar {
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("файл (*.xml)", "*.xml");
         fileChooser.getExtensionFilters().add(extFilter);
 
+        final FileChooser templateChooser = new FileChooser();
+        templateChooser.setTitle("Открыть шаблон");
+        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("файл (*.doc)", "*.doc");
+        templateChooser.getExtensionFilters().add(filter);
+
         final MenuItem newFile = new MenuItem("Новый реестр");
         MenuItem loadFile = new MenuItem("Открыть");
         MenuItem saveFile = new MenuItem("Сохранить как");
         MenuItem addRecord = new MenuItem("Добавить");
         MenuItem findRecord = new MenuItem("Найти/Удалить");
 
-        Menu statement = new Menu("Заявление");
-        Menu statementGSPK = new Menu("Заявление ГСПК");
-        Menu bulletin = new Menu("Бюллетень");
-
-        MenuItem genStatement = new MenuItem("Создать заявление");
-        MenuItem gen_statements = new MenuItem("Создать для всех");
-
-        MenuItem genStatementGSPK = new MenuItem("Создать заявление ГСПК");
-        MenuItem gen_statementsGSPK = new MenuItem("Создать для всех");
-
-        MenuItem genBulletin = new MenuItem("Создать бюллетень");
-        MenuItem gen_bulletins = new MenuItem("Создать для всех");
+        MenuItem genRandstm = new MenuItem("Создать для одного");
+        MenuItem gen_randstms = new MenuItem("Создать для всех");
 
         MenuItem addDocTable = new MenuItem("Создать таблицу");
 
@@ -74,15 +67,13 @@ public class MenuLine extends MenuBar {
 
         file.getItems().addAll(newFile, loadFile, saveFile);
         actions.getItems().addAll(addRecord, findRecord);
-        documents.getItems().addAll(statement, statementGSPK, bulletin);
-
-        statement.getItems().addAll(genStatement, gen_statements);
-        statementGSPK.getItems().addAll(genStatementGSPK, gen_statementsGSPK);
-        bulletin.getItems().addAll(genBulletin, gen_bulletins);
+        documents.getItems().addAll(genRandstm, gen_randstms);
 
         genTable.getItems().addAll(addDocTable);
 
         about.getItems().addAll(info);
+
+        newFile.setAccelerator(KeyCombination.keyCombination("Ctrl+N"));
 
         newFile.setOnAction(event -> {
             myTable = new MyTable();
@@ -92,12 +83,16 @@ public class MenuLine extends MenuBar {
             parentClass.creatingLoadingTable();
         });
 
+        saveFile.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
+
         saveFile.setOnAction(event -> {
             File file1 = fileChooser.showSaveDialog(null);
             List <Organization> allDataU = myTable.getDataU();
             workFile.setDb(allDataU);
             workFile.dbWrite(file1.getAbsolutePath());
         });
+
+        loadFile.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
 
         loadFile.setOnAction(event -> {
             File file1 = fileChooser.showOpenDialog(null);
@@ -155,83 +150,14 @@ public class MenuLine extends MenuBar {
 //            }
 //        });
 
-        genStatement.setOnAction(event -> {
+        genRandstm.setAccelerator(KeyCombination.keyCombination("Ctrl+G"));
+
+        genRandstm.setOnAction(event -> {
+            File tempFile = templateChooser.showOpenDialog(null);
             try
             {
                 genFile = new GenDocFile();
-                genFile.genStatement(inU, myTable);
-            }
-            catch (Exception e)
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Ошибка");
-                alert.setContentText("");
-                alert.setHeaderText("Ошибка: Перезапустите программу!");
-                alert.showAndWait();
-            }
-
-
-        });
-
-            gen_statements.setOnAction(event -> {
-            try
-            {
-                genFile = new GenDocFile();
-                genFile.genStatements(inU, myTable);
-            }
-            catch (Exception e)
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Ошибка");
-                alert.setContentText("");
-                alert.setHeaderText("Ошибка: Перезапустите программу!");
-                alert.showAndWait();
-            }
-
-
-        });
-
-        genStatementGSPK.setOnAction(event -> {
-            try
-            {
-                genFile = new GenDocFile();
-                genFile.genStatementGSPK(inU, myTable);
-            }
-            catch (Exception e)
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Ошибка");
-                alert.setContentText("");
-                alert.setHeaderText("Ошибка: Перезапустите программу!");
-                alert.showAndWait();
-            }
-
-
-        });
-
-        gen_statementsGSPK.setOnAction(event -> {
-            try
-            {
-                genFile = new GenDocFile();
-                genFile.genStatementsGSPK(inU, myTable);
-            }
-            catch (Exception e)
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Ошибка #2");
-                alert.setContentText("");
-                alert.setHeaderText("Ошибка: Перезапустите программу!");
-                alert.showAndWait();
-            }
-
-
-        });
-
-        genBulletin.setOnAction(event -> {
-            try
-            {
-                genFile = new GenDocFile();
-                genFile.genBulletin(inU, myTable);
+                genFile.genRandTmp(tempFile.getAbsolutePath(), inU, myTable);
             }
             catch (Exception e)
             {
@@ -243,11 +169,14 @@ public class MenuLine extends MenuBar {
             }
         });
 
-        gen_bulletins.setOnAction(event -> {
+        gen_randstms.setAccelerator(KeyCombination.keyCombination("Ctrl+P"));
+
+        gen_randstms.setOnAction(event -> {
+            File tempFile = templateChooser.showOpenDialog(null);
             try
             {
                 genFile = new GenDocFile();
-                genFile.genBulletins(inU, myTable);
+                genFile.genRandTmpPackage(tempFile.getAbsolutePath(), inU, myTable);
             }
             catch (Exception e)
             {
@@ -258,6 +187,8 @@ public class MenuLine extends MenuBar {
                 alert.showAndWait();
             }
         });
+
+        addDocTable.setAccelerator(KeyCombination.keyCombination("Ctrl+T"));
 
         addDocTable.setOnAction(event -> {
 
@@ -277,6 +208,8 @@ public class MenuLine extends MenuBar {
                 alert.showAndWait();
             }
         });
+
+        info.setAccelerator(KeyCombination.keyCombination("Ctrl+Shift+I"));
 
         info.setOnAction(event -> {
             try

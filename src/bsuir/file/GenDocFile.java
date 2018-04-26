@@ -4,27 +4,26 @@ import bsuir.model.Organization;
 import bsuir.view.MyTable;
 import javafx.collections.FXCollections;
 import javafx.scene.control.Alert;
-import org.apache.poi.POIDocument;
-import org.apache.poi.hslf.record.Document;
+import javafx.scene.control.TextInputDialog;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.usermodel.Range;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 
-import javax.swing.*;
 import java.io.*;
 import java.util.List;
+import java.util.Optional;
 
 public class GenDocFile {
 
     private List<Organization> db = FXCollections.observableArrayList();
     public MyTable myTable;
 
-    public void genStatement(List<Organization> db, MyTable myTable) {
+    public void genRandTmp(String filePath, List<Organization> db, MyTable myTable) {
 
         this.db = db;
         this.myTable = myTable;
 
-        String filename = "documents/templates/Заявление_шаблон.doc";
+        String filename = filePath;
         POIFSFileSystem fs = null;
 
         List <Organization> allOwner = this.db;
@@ -38,21 +37,47 @@ public class GenDocFile {
 
             Organization owner = allOwner.get(myTable.getSelectionModel().getSelectedIndex());
 
-            range.replaceText("FAMILY", owner.getFio());
-            range.replaceText("ADDRESS", owner.getAddress());
-            range.replaceText("PN", owner.getPn());
             range.replaceText("%FIO%", owner.getId());
-            range.replaceText("UR", owner.getUr());
+            range.replaceText("FAMILY", owner.getFio());
+            range.replaceText("DATE_REG", owner.getDateReg());
+            range.replaceText("INV", owner.getInv());
+            range.replaceText("BOX_SQ", owner.getBoxSq());
+            range.replaceText("NUM", owner.getNum());
+            range.replaceText("PASP", owner.getPasp());
+            range.replaceText("PW", owner.getPw());
+            range.replaceText("PD", owner.getPd());
+            range.replaceText("PN", owner.getPn());
+            range.replaceText("PHONE", owner.getPhone());
+            range.replaceText("MAIL", owner.getMail());
+            range.replaceText("ADDRESS", owner.getAddress());
+            range.replaceText("ADRREG", owner.getAdrreg());
+            range.replaceText("AUTO", owner.getAuto());
+            range.replaceText("IND_DOG", owner.getIndDog());
+            range.replaceText("INDEX", owner.getIndex());
+            range.replaceText("SQPR", owner.getSqpr());
+            range.replaceText("PROC", owner.getProc());
+            range.replaceText("SQ", owner.getSq());
             range.replaceText("OSAVTO", owner.getOsavto());
+            range.replaceText("UR", owner.getUr());
+            range.replaceText("OSSPECTR", owner.getOsspectr());
             range.replaceText("NED1", owner.getNed_1());
             range.replaceText("NED2", owner.getNed_2());
 
+            TextInputDialog dialog = new TextInputDialog("Заявление");
+            dialog.setTitle("Название документа");
+            dialog.setHeaderText("Введите имя файла");
+            dialog.setContentText("Имя файла:");
 
-            OutputStream out = new FileOutputStream("documents/gen_statement/Заявление_"+owner.getFio()+".doc");
-            doc.write(out);
+            Optional<String> result = dialog.showAndWait();
 
-            out.flush();
-            out.close();
+            if (result.isPresent()){
+                OutputStream out = new FileOutputStream("documents/gen_doc/"+result.get()+"_"+owner.getFio()+".doc");
+
+                doc.write(out);
+
+                out.flush();
+                out.close();
+            }
         }
         catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -61,239 +86,71 @@ public class GenDocFile {
             alert.setHeaderText("Ошибка: Откройте файл!");
             alert.showAndWait();
         }
+
     }
 
-        public void genStatements(List<Organization> db, MyTable myTable) {
+    public void genRandTmpPackage(String filePath, List<Organization> db, MyTable myTable) {
 
-            this.db = db;
-            this.myTable = myTable;
+        this.db = db;
+        this.myTable = myTable;
 
-            List <Organization> allOwner = this.db;
+        String filename = filePath;
+        POIFSFileSystem fs = null;
 
-            try {
+        List <Organization> allOwner = this.db;
 
-                for ( int i = 0; i < allOwner.size(); i++ ) {
+        TextInputDialog dialog = new TextInputDialog("Заявление");
+        dialog.setTitle("Название документа");
+        dialog.setHeaderText("Введите имя файла");
+        dialog.setContentText("Имя файла:");
 
-                    String filename = "documents/templates/Заявление_шаблон.doc";
-                    POIFSFileSystem fs = null;
+        Optional<String> result = dialog.showAndWait();
 
-                    fs = new POIFSFileSystem(new FileInputStream(filename));
-                    HWPFDocument doc = new HWPFDocument(fs);
+        try {
 
-                    Range range = doc.getRange();
+            for ( int i = 0; i < allOwner.size(); i++ ) {
 
-                    Organization owner = allOwner.get(i);
+                fs = new POIFSFileSystem(new FileInputStream(filename));
+                HWPFDocument doc = new HWPFDocument(fs);
 
-                    range.replaceText("FAMILY", owner.getFio());
-                    range.replaceText("ADDRESS", owner.getAddress());
-                    range.replaceText("PN", owner.getPn());
-                    range.replaceText("%FIO%", owner.getId());
-                    range.replaceText("UR", owner.getUr());
-                    range.replaceText("OSAVTO", owner.getOsavto());
-                    range.replaceText("NED1", owner.getNed_1());
-                    range.replaceText("NED2", owner.getNed_2());
+                Range range = doc.getRange();
 
-                    FileOutputStream out = new FileOutputStream("documents/gen_statement/package/"+owner.getId()+"_заявление_"+owner.getFio()+".doc");
+                Organization owner = allOwner.get(i);
+
+                range.replaceText("%FIO%", owner.getId());
+                range.replaceText("FAMILY", owner.getFio());
+                range.replaceText("DATE_REG", owner.getDateReg());
+                range.replaceText("INV", owner.getInv());
+                range.replaceText("BOX_SQ", owner.getBoxSq());
+                range.replaceText("NUM", owner.getNum());
+                range.replaceText("PASP", owner.getPasp());
+                range.replaceText("PW", owner.getPw());
+                range.replaceText("PD", owner.getPd());
+                range.replaceText("PN", owner.getPn());
+                range.replaceText("PHONE", owner.getPhone());
+                range.replaceText("MAIL", owner.getMail());
+                range.replaceText("ADDRESS", owner.getAddress());
+                range.replaceText("ADRREG", owner.getAdrreg());
+                range.replaceText("AUTO", owner.getAuto());
+                range.replaceText("IND_DOG", owner.getIndDog());
+                range.replaceText("INDEX", owner.getIndex());
+                range.replaceText("SQPR", owner.getSqpr());
+                range.replaceText("PROC", owner.getProc());
+                range.replaceText("SQ", owner.getSq());
+                range.replaceText("OSAVTO", owner.getOsavto());
+                range.replaceText("UR", owner.getUr());
+                range.replaceText("OSSPECTR", owner.getOsspectr());
+                range.replaceText("NED1", owner.getNed_1());
+                range.replaceText("NED2", owner.getNed_2());
+
+                if (result.isPresent()){
+                    OutputStream out = new FileOutputStream("documents/gen_doc/package/"+result.get()+"_"+owner.getFio()+".doc");
 
                     doc.write(out);
 
                     out.flush();
                     out.close();
                 }
-                }
-        catch (Exception e) {
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Ошибка #2");
-                    alert.setContentText("");
-                    alert.setHeaderText("Ошибка: Откройте файл!");
-                    alert.showAndWait();
-                }
-            }
-
-    public void genBulletin(List<Organization> db, MyTable myTable) {
-
-        this.db = db;
-        this.myTable = myTable;
-
-        String filename = "documents/templates/Бюллетень_шаблон.doc";
-        POIFSFileSystem fs = null;
-
-        List <Organization> allOwner = this.db;
-
-        try {
-
-            fs = new POIFSFileSystem(new FileInputStream(filename));
-            HWPFDocument doc = new HWPFDocument(fs);
-
-            Range range = doc.getRange();
-
-            Organization owner = allOwner.get(myTable.getSelectionModel().getSelectedIndex());
-
-            range.replaceText("IND_DOG", owner.getIndDog());
-            range.replaceText("INDEX", owner.getIndex());
-            range.replaceText("FAMILY", owner.getFio());
-            range.replaceText("%FIO%", owner.getId());
-            range.replaceText("BOX_SQ", owner.getBoxSq());
-            range.replaceText("PASP", owner.getPasp());
-            range.replaceText("PW", owner.getPw());
-            range.replaceText("PD", owner.getPd());
-            range.replaceText("PN", owner.getPn());
-            range.replaceText("ADDRESS", owner.getAddress());
-            range.replaceText("PHONE", owner.getPhone());
-            range.replaceText("MAIL", owner.getMail());
-            range.replaceText("NUM", owner.getNum());
-            range.replaceText("DATE_REG", owner.getDateReg());
-            range.replaceText("INV", owner.getInv());
-
-            OutputStream out = new FileOutputStream("documents/gen_bulletin/Бюллетень_"+owner.getFio()+".doc");
-            doc.write(out);
-
-            out.flush();
-            out.close();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Ошибка");
-            alert.setContentText("");
-            alert.setHeaderText("Ошибка: Откройте файл!");
-            alert.showAndWait();
-        }
-    }
-
-    public void genBulletins(List<Organization> db, MyTable myTable) {
-
-        this.db = db;
-        this.myTable = myTable;
-
-        List <Organization> allOwner = this.db;
-
-        try {
-
-            for ( int i = 0; i < allOwner.size(); i++ ) {
-
-                String filename = "documents/templates/Бюллетень_шаблон.doc";
-                POIFSFileSystem fs = null;
-
-                fs = new POIFSFileSystem(new FileInputStream(filename));
-                HWPFDocument doc = new HWPFDocument(fs);
-
-                Range range = doc.getRange();
-
-                Organization owner = allOwner.get(i);
-
-                range.replaceText("IND_DOG", owner.getIndDog());
-                range.replaceText("INDEX", owner.getIndex());
-                range.replaceText("FAMILY", owner.getFio());
-                range.replaceText("%FIO%", owner.getId());
-                range.replaceText("BOX_SQ", owner.getBoxSq());
-                range.replaceText("PASP", owner.getPasp());
-                range.replaceText("PW", owner.getPw());
-                range.replaceText("PD", owner.getPd());
-                range.replaceText("PN", owner.getPn());
-                range.replaceText("ADDRESS", owner.getAddress());
-                range.replaceText("PHONE", owner.getPhone());
-                range.replaceText("MAIL", owner.getMail());
-                range.replaceText("NUM", owner.getNum());
-                range.replaceText("DATE_REG", owner.getDateReg());
-                range.replaceText("INV", owner.getInv());
-
-                OutputStream out = new FileOutputStream("documents/gen_bulletin/package/"+owner.getId()+"_бюллетень_"+owner.getFio()+".doc");
-                doc.write(out);
-
-                out.flush();
-                out.close();
-            }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Ошибка");
-            alert.setContentText("");
-            alert.setHeaderText("Ошибка: Откройте файл!");
-            alert.showAndWait();
-        }
-    }
-
-    public void genStatementGSPK(List<Organization> db, MyTable myTable) {
-
-        this.db = db;
-        this.myTable = myTable;
-
-        String filename = "documents/templates/Заявление_шаблон_ГСПК.doc";
-        POIFSFileSystem fs = null;
-
-        List <Organization> allOwner = this.db;
-
-        try {
-
-
-            fs = new POIFSFileSystem(new FileInputStream(filename));
-            HWPFDocument doc = new HWPFDocument(fs);
-
-            Range range = doc.getRange();
-
-            Organization owner = allOwner.get(myTable.getSelectionModel().getSelectedIndex());
-
-            range.replaceText("%FIO%", owner.getId());
-            range.replaceText("FAMILY", owner.getFio());
-            range.replaceText("ADDRESS", owner.getAddress());
-            range.replaceText("PHONE", owner.getPhone());
-            range.replaceText("MAIL", owner.getMail());
-            range.replaceText("IND_DOG", owner.getIndDog());
-            range.replaceText("INDEX", owner.getIndex());
-            range.replaceText("BOX_SQ", owner.getBoxSq());
-
-            OutputStream out = new FileOutputStream("documents/gen_statement_GSPK/Заявление_ГСПК_"+owner.getFio()+".doc");
-            doc.write(out);
-
-            out.flush();
-            out.close();
-        }
-        catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Ошибка");
-            alert.setContentText("");
-            alert.setHeaderText("Ошибка: Откройте файл!");
-            alert.showAndWait();
-        }
-    }
-
-    public void genStatementsGSPK(List<Organization> db, MyTable myTable) {
-
-        this.db = db;
-        this.myTable = myTable;
-
-        List <Organization> allOwner = this.db;
-
-        try {
-
-            for ( int i = 0; i < allOwner.size(); i++ ) {
-
-                String filename = "documents/templates/Заявление_шаблон_ГСПК.doc";
-                POIFSFileSystem fs = null;
-
-                fs = new POIFSFileSystem(new FileInputStream(filename));
-                HWPFDocument doc = new HWPFDocument(fs);
-
-                Range range = doc.getRange();
-
-                Organization owner = allOwner.get(i);
-
-                range.replaceText("%FIO%", owner.getId());
-                range.replaceText("FAMILY", owner.getFio());
-                range.replaceText("ADDRESS", owner.getAddress());
-                range.replaceText("PHONE", owner.getPhone());
-                range.replaceText("MAIL", owner.getMail());
-                range.replaceText("IND_DOG", owner.getIndDog());
-                range.replaceText("INDEX", owner.getIndex());
-                range.replaceText("BOX_SQ", owner.getBoxSq());
-
-                OutputStream out = new FileOutputStream("documents/gen_statement_GSPK/package/"+owner.getId()+"_заявление_ГСПК_"+owner.getFio()+".doc");
-                doc.write(out);
-
-                out.flush();
-                out.close();
             }
         }
         catch (Exception e) {
@@ -303,5 +160,6 @@ public class GenDocFile {
             alert.setHeaderText("Ошибка: Откройте файл!");
             alert.showAndWait();
         }
+
     }
 }
