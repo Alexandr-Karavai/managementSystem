@@ -26,7 +26,7 @@ public class MyTable extends TableView {
         TableColumn fioColumn = new TableColumn("ФИО собственника");
             fioColumn.setPrefWidth(190.0);
 
-        TableColumn dateRegColumn = new TableColumn("Дата регистрации");
+        TableColumn dateRegColumn = new TableColumn("Дата госрегистрации");
             dateRegColumn.setPrefWidth(100.0);
 
         TableColumn invColumn = new TableColumn("Инвентарный номер");
@@ -35,7 +35,7 @@ public class MyTable extends TableView {
         TableColumn boxSqColumn = new TableColumn("Площадь");
             boxSqColumn.setPrefWidth(100.0);
 
-        TableColumn numColumn = new TableColumn("Номер");
+        TableColumn numColumn = new TableColumn("Свидетельство о госрегистрации");
             numColumn.setPrefWidth(100.0);
 
         TableColumn paspColumn = new TableColumn("Серия паспорта");
@@ -47,7 +47,7 @@ public class MyTable extends TableView {
         TableColumn pdColumn = new TableColumn("Дата выдачи");
             pdColumn.setPrefWidth(100.0);
 
-        TableColumn pnColumn = new TableColumn("ПН");
+        TableColumn pnColumn = new TableColumn("И.Н. паспорта");
             pnColumn.setPrefWidth(100.0);
 
         TableColumn phoneColumn = new TableColumn("Телефон");

@@ -2,10 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4cff6a-4f0f-45bf-bc7b-aa4ac7f661e3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_poi_poi_ooxml_3_11.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_poi_poi_ooxml_schemas_3_11.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jdom_2_0_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jdom_2_0_6.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" afterPath="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_bulletin/package/1_бюллетень_Рожкова Лидия Николаевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_bulletin/package/2_бюллетень_Рожков Сергей.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_bulletin/package/3_бюллетень_Найденова Виола Валерьевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_bulletin/package/4_бюллетень_Цымбалов Дмитрий Нилович.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_bulletin/package/5_бюллетень_Рожкова Лидия Николаевна2.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_bulletin/Бюллетень_Рожкова Лидия Николаевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement/package/1_заявление_Рожкова Лидия Николаевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement/package/2_заявление_Рожков Сергей.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement/package/3_заявление_Найденова Виола Валерьевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement/package/4_заявление_Цымбалов Дмитрий Нилович.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement/package/5_заявление_Рожкова Лидия Николаевна2.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement/Заявление_Рожкова Лидия Николаевна2.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement_GSPK/package/1_заявление_ГСПК_Рожкова Лидия Николаевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement_GSPK/package/2_заявление_ГСПК_Рожков Сергей.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement_GSPK/package/3_заявление_ГСПК_Найденова Виола Валерьевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement_GSPK/package/4_заявление_ГСПК_Цымбалов Дмитрий Нилович.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement_GSPK/package/5_заявление_ГСПК_Рожкова Лидия Николаевна2.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_statement_GSPK/Заявление_ГСПК_Рожкова Лидия Николаевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_tables/Собственники.xls" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/managementSystem.iml" afterPath="$PROJECT_DIR$/managementSystem.iml" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" afterPath="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" afterPath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
       <change beforePath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" afterPath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/view/MyTable.java" afterPath="$PROJECT_DIR$/src/bsuir/view/MyTable.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,23 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MenuLine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4182">
-              <caret line="261" column="19" lean-forward="false" selection-start-line="261" selection-start-column="19" selection-end-line="261" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GenDocFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="74" column="61" lean-forward="false" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="61" />
+            <state relative-caret-position="204">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,48 +58,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/AddDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="75" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenDocTable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GenDocTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="340" column="9" lean-forward="true" selection-start-line="340" selection-start-column="9" selection-end-line="340" selection-end-column="9" />
+            <state relative-caret-position="584">
+              <caret line="95" column="28" lean-forward="false" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Components.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/controller/Components.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/MyTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="46" column="59" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="59" />
-              <folding>
-                <element signature="e#19432#19433#0" expanded="true" />
-                <element signature="e#19468#19469#0" expanded="true" />
+                <element signature="method#calcSizeTable#0;class#GenDocTable#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -96,9 +74,45 @@
       <file leaf-file-name="TagsForFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/TagsForFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="31" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2952">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4136#4733#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchDelete.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/file/SearchDelete.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="266" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyTable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/view/MyTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="348" column="0" lean-forward="true" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
+              <folding>
+                <element signature="e#19471#19472#0" expanded="true" />
+                <element signature="e#19507#19508#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,34 +120,10 @@
       <file leaf-file-name="SaveLoadFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="47" />
+            <state relative-caret-position="204">
+              <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuItem.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/MenuItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6205">
-              <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
-              <folding>
-                <element signature="e#15839#15840#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Organization.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-              <folding>
-                <element signature="e#1653#1654#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,6 +135,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -185,17 +176,18 @@
         <option value="$PROJECT_DIR$/src/bsuir/model/Organization.java" />
         <option value="$PROJECT_DIR$/src/bsuir/TagsForFile.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/SearchDelete.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/view/MyTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/controller/Components.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/view/MyTable.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/view/genTableView.fxml" />
         <option value="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -216,7 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,13 +263,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/SceneBuilder.exe" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -439,7 +431,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -451,11 +443,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14114584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -467,6 +458,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20360552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -475,28 +467,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Owner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
-          <folding>
-            <element signature="e#1653#1654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/TagsForFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -583,13 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Owner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/collections/ObservableListBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -611,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/file/SearchDelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4981">
-          <caret line="293" column="0" lean-forward="false" selection-start-line="293" selection-start-column="0" selection-end-line="295" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/event/Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2737">
@@ -629,61 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40358">
           <caret line="2613" column="0" lean-forward="false" selection-start-line="2613" selection-start-column="0" selection-end-line="2613" selection-end-column="0" />
-          <folding>
-            <element signature="e#70559#70560#0" expanded="false" />
-            <element signature="e#70605#70606#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/MenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6205">
-          <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
-          <folding>
-            <element signature="e#15839#15840#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding>
-            <element signature="e#1653#1654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="261" column="19" lean-forward="false" selection-start-line="261" selection-start-column="19" selection-end-line="261" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MyTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="46" column="59" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="59" />
-          <folding>
-            <element signature="e#19432#19433#0" expanded="true" />
-            <element signature="e#19468#19469#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,43 +598,255 @@
         <state relative-caret-position="1020">
           <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="75" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/TagsForFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="74" column="61" lean-forward="false" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/controller/Components.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="44" />
+        <state relative-caret-position="1071">
+          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/MenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6205">
+          <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+          <folding>
+            <element signature="e#15839#15840#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Owner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#1381#1382#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.11/poi-ooxml-3.11.jar!/org/apache/poi/xwpf/usermodel/XWPFDocument.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3179">
+          <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+          <folding>
+            <marker date="1524651852721" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1524651852721" expanded="false" signature="153:2937" ph="..." />
+            <marker date="1524651852721" expanded="true" signature="4102:4175" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="4236:4328" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="4356:4425" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="4482:8974" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="9010:9494" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="9562:10713" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="10760:11403" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="11443:11874" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="11926:11937" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="11960:11966" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="12011:12022" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="12051:12057" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="12106:12117" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="12172:12178" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="12239:12250" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="12286:12292" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="12340:12351" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="12404:12410" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="12450:12461" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="12510:12516" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="12562:12662" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="12707:12718" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="12768:12774" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="12821:12832" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="12873:12879" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="12924:12935" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="12985:12991" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="13038:13049" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="13090:13096" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="13144:13155" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="13181:13187" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="13242:13528" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="13578:13668" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="13717:13807" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="13854:13962" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="14007:14114" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="14165:14457" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="14498:14597" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="14645:14907" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="14966:14977" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="15008:15014" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="15094:15681" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="15754:16517" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="16605:17259" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="17300:17311" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="17371:17377" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="17414:17425" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="17481:17487" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="17551:19144" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="19198:20636" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="20691:20959" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="21018:21365" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="21416:21427" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="21462:21468" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="21511:21522" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="21557:21563" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="21612:22788" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="22846:23248" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="23293:23472" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="23517:24078" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="24117:24642" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="24687:25247" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="25299:25310" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="25350:25356" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="25408:25561" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="25609:26366" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="26431:26553" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="26599:26726" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="26763:26948" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="27003:27200" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="27230:27918" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="27971:28085" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="28136:28147" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="28207:28213" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="28268:28279" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="28335:28341" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="28392:28403" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="28462:28468" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="28526:28608" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="28653:28664" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="28702:28708" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="28753:28764" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="28826:28832" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="28917:29015" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="29064:29075" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="29133:29139" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="29228:29322" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="29367:29378" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="29439:29445" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="29530:29627" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="29679:29763" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="29854:29958" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="30023:30097" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="30144:30155" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="30189:30195" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="30234:30245" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="30277:30283" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="30322:30333" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="30373:30379" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="30430:30441" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="30481:30487" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="30543:30930" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="30981:30992" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="31043:31049" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="31108:31480" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="31543:31882" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="31959:32574" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="32671:34400" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="34493:34711" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="34791:35266" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="35329:35617" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="35658:35669" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="35691:35697" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="35732:35743" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="35762:35768" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="35815:36076" ph="{...}" />
+            <marker date="1524651852721" expanded="true" signature="36121:36363" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="36415:36426" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="36456:36462" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="36522:36533" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="36567:36573" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="36627:36740" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="36781:36792" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="36804:36810" ph=" }" />
+            <marker date="1524651852721" expanded="false" signature="36845:36856" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="36881:36887" ph=" }" />
+            <marker date="1524651852721" expanded="true" signature="36938:37734" ph="{...}" />
+            <marker date="1524651852721" expanded="false" signature="37777:37788" ph=" { " />
+            <marker date="1524651852721" expanded="false" signature="37800:37806" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#1653#1654#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/genTableView.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/bsuir/file/SearchDelete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="266" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/TagsForFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="31" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="340" column="9" lean-forward="true" selection-start-line="340" selection-start-column="9" selection-end-line="340" selection-end-column="9" />
+        <state relative-caret-position="584">
+          <caret line="95" column="28" lean-forward="false" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#calcSizeTable#0;class#GenDocTable#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2952">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4136#4733#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MyTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="348" column="0" lean-forward="true" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
+          <folding>
+            <element signature="e#19471#19472#0" expanded="true" />
+            <element signature="e#19507#19508#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -798,7 +916,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.controlsfx:controlsfx:9.0.0</last-edited>
+          <last-edited>jdom-2.0.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
