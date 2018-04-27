@@ -38,22 +38,22 @@ public class GenDocTable {
     final TextField text_15 = new TextField();
     final TextField text_16 = new TextField();
 
-    public ToggleSwitch tSwitch_1 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_2 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_3 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_4 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_5 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_6 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_7 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_8 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_9 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_10 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_11 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_12 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_13 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_14 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_15 = new ToggleSwitch();
-    public ToggleSwitch tSwitch_16 = new ToggleSwitch();
+    public CheckBox tSwitch_1 = new CheckBox();
+    public CheckBox tSwitch_2 = new CheckBox();
+    public CheckBox tSwitch_3 = new CheckBox();
+    public CheckBox tSwitch_4 = new CheckBox();
+    public CheckBox tSwitch_5 = new CheckBox();
+    public CheckBox tSwitch_6 = new CheckBox();
+    public CheckBox tSwitch_7 = new CheckBox();
+    public CheckBox tSwitch_8 = new CheckBox();
+    public CheckBox tSwitch_9 = new CheckBox();
+    public CheckBox tSwitch_10 = new CheckBox();
+    public CheckBox tSwitch_11 = new CheckBox();
+    public CheckBox tSwitch_12 = new CheckBox();
+    public CheckBox tSwitch_13 = new CheckBox();
+    public CheckBox tSwitch_14 = new CheckBox();
+    public CheckBox tSwitch_15 = new CheckBox();
+    public CheckBox tSwitch_16 = new CheckBox();
 
     ObservableList<String> tagList = FXCollections.observableArrayList
             (

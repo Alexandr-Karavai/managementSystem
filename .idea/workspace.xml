@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4cff6a-4f0f-45bf-bc7b-aa4ac7f661e3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" afterPath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
-      <change beforePath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" afterPath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +23,7 @@
       <file leaf-file-name="GenDocFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1847">
+            <state relative-caret-position="-748">
               <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -57,8 +55,8 @@
       <file leaf-file-name="OpenTmp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1989">
-              <caret line="132" column="12" lean-forward="false" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
+            <state relative-caret-position="-759">
+              <caret line="92" column="102" lean-forward="false" selection-start-line="92" selection-start-column="102" selection-end-line="92" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,8 +115,8 @@
       <file leaf-file-name="GenDocTable.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5644">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createSimpleTable#0;class#GenDocTable#0" expanded="false" />
@@ -180,10 +178,10 @@
         <option value="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/MyTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/genTableView.fxml" />
-        <option value="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
       </list>
     </option>
   </component>
@@ -598,6 +596,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6205">
           <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+          <folding>
+            <element signature="e#15839#15840#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -681,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="132" column="12" lean-forward="false" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
+        <state relative-caret-position="-759">
+          <caret line="92" column="102" lean-forward="false" selection-start-line="92" selection-start-column="102" selection-end-line="92" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -691,7 +692,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1847">
+        <state relative-caret-position="-748">
           <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -701,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5644">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createSimpleTable#0;class#GenDocTable#0" expanded="false" />
