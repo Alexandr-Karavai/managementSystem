@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4cff6a-4f0f-45bf-bc7b-aa4ac7f661e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" afterPath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" afterPath="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpenTmp.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OpenTmp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-759">
-              <caret line="92" column="102" lean-forward="false" selection-start-line="92" selection-start-column="102" selection-end-line="92" selection-end-column="102" />
+            <state relative-caret-position="-1558">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenDocTable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GenDocTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="-1411">
               <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -180,8 +179,8 @@
         <option value="$PROJECT_DIR$/src/bsuir/view/genTableView.fxml" />
         <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
       </list>
     </option>
   </component>
@@ -446,6 +445,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14114584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20360552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -458,7 +458,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20360552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -680,16 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-759">
-          <caret line="92" column="102" lean-forward="false" selection-start-line="92" selection-start-column="102" selection-end-line="92" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-748">
@@ -702,12 +691,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="-1411">
           <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createSimpleTable#0;class#GenDocTable#0" expanded="false" />
             <element signature="method#calcSizeTable#0;class#GenDocTable#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1558">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
