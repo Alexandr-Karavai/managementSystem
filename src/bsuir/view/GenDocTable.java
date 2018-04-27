@@ -1,7 +1,6 @@
 package bsuir.view;
 
 import bsuir.model.Organization;
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
@@ -11,28 +10,16 @@ import javafx.stage.Stage;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.xwpf.usermodel.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.List;
 import java.util.Optional;
 
-import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
-import org.apache.poi.xwpf.usermodel.UnderlinePatterns;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
-import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
-import org.apache.poi.xwpf.usermodel.XWPFTableCell;
-import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 import org.controlsfx.control.ToggleSwitch;
 
 public class GenDocTable {
-
-    final TextField nameTableText = new TextField();
 
     final TextField text_1 = new TextField();
     final TextField text_2 = new TextField();
@@ -97,9 +84,22 @@ public class GenDocTable {
                     "NED_2"
             );
 
-     public ChoiceBox titleBox = new ChoiceBox<String>(tagList);
-
-
+    public ChoiceBox tagBox_1 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_2 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_3 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_4 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_5 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_6 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_7 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_8 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_9 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_10 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_11 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_12 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_13 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_14 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_15 = new ChoiceBox<String>(tagList);
+    public ChoiceBox tagBox_16 = new ChoiceBox<String>(tagList);
 
 //    public CheckBox add_ID = new CheckBox("ID");
 //    public CheckBox add_FIO = new CheckBox("ФИО");
@@ -138,7 +138,6 @@ public class GenDocTable {
 
         Pane pane = new Pane();
 
-        //* BorderPane pane = new BorderPane();
         primaryStage.setTitle("Создать таблицу");
         Scene scene;
 
@@ -146,12 +145,17 @@ public class GenDocTable {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-//        Label nameTableLabel = new Label("Название таблицы");
-//        nameTableLabel.setLayoutX(100);
-//        nameTableLabel.setLayoutY(10);
-//
-//        nameTableText.setLayoutX(300);
-//        nameTableText.setLayoutY(10);
+        Label nameCellLabel = new Label("Название колонки");
+        nameCellLabel.setLayoutX(50);
+        nameCellLabel.setLayoutY(10);
+
+        Label nameSwitchLabel = new Label("Выкл/Вкл");
+        nameSwitchLabel.setLayoutX(280);
+        nameSwitchLabel.setLayoutY(10);
+
+        Label nameTagLabel = new Label("Тег в реестре");
+        nameTagLabel.setLayoutX(400);
+        nameTagLabel.setLayoutY(10);
 
         text_1.setLayoutX(50);
         text_1.setLayoutY(50);
@@ -201,162 +205,102 @@ public class GenDocTable {
         text_16.setLayoutX(50);
         text_16.setLayoutY(800);
 
-        tSwitch_1.setLayoutX(220);
+        tSwitch_1.setLayoutX(270);
         tSwitch_1.setLayoutY(55);
 
-        tSwitch_2.setLayoutX(220);
+        tSwitch_2.setLayoutX(270);
         tSwitch_2.setLayoutY(105);
 
-        tSwitch_3.setLayoutX(220);
+        tSwitch_3.setLayoutX(270);
         tSwitch_3.setLayoutY(155);
 
-        tSwitch_4.setLayoutX(220);
+        tSwitch_4.setLayoutX(270);
         tSwitch_4.setLayoutY(205);
 
-        tSwitch_5.setLayoutX(220);
+        tSwitch_5.setLayoutX(270);
         tSwitch_5.setLayoutY(255);
 
-        tSwitch_6.setLayoutX(220);
+        tSwitch_6.setLayoutX(270);
         tSwitch_6.setLayoutY(305);
 
-        tSwitch_7.setLayoutX(220);
+        tSwitch_7.setLayoutX(270);
         tSwitch_7.setLayoutY(355);
 
-        tSwitch_8.setLayoutX(220);
+        tSwitch_8.setLayoutX(270);
         tSwitch_8.setLayoutY(405);
 
-        tSwitch_9.setLayoutX(220);
+        tSwitch_9.setLayoutX(270);
         tSwitch_9.setLayoutY(455);
 
-        tSwitch_10.setLayoutX(220);
+        tSwitch_10.setLayoutX(270);
         tSwitch_10.setLayoutY(505);
 
-        tSwitch_11.setLayoutX(220);
+        tSwitch_11.setLayoutX(270);
         tSwitch_11.setLayoutY(555);
 
-        tSwitch_12.setLayoutX(220);
+        tSwitch_12.setLayoutX(270);
         tSwitch_12.setLayoutY(605);
 
-        tSwitch_13.setLayoutX(220);
+        tSwitch_13.setLayoutX(270);
         tSwitch_13.setLayoutY(655);
 
-        tSwitch_14.setLayoutX(220);
+        tSwitch_14.setLayoutX(270);
         tSwitch_14.setLayoutY(705);
 
-        tSwitch_15.setLayoutX(220);
+        tSwitch_15.setLayoutX(270);
         tSwitch_15.setLayoutY(755);
 
-        tSwitch_16.setLayoutX(220);
+        tSwitch_16.setLayoutX(270);
         tSwitch_16.setLayoutY(805);
 
-        titleBox.setLayoutX(400);
-        titleBox.setLayoutY(50);
-//        add_ID.setMinSize(50, 20);
-//
-//        add_FIO.setMinSize(50, 20);
-//        add_FIO.setLayoutX(180);
-//        add_FIO.setLayoutY(50);
-//
-//        add_DATE_REG.setMinSize(50, 20);
-//        add_DATE_REG.setLayoutX(310);
-//        add_DATE_REG.setLayoutY(50);
-//
-//        add_INV.setMinSize(50, 20);
-//        add_INV.setLayoutX(440);
-//        add_INV.setLayoutY(50);
-//
-//        add_BOX_SQ.setMinSize(50, 20);
-//
-//        add_NUM.setMinSize(50, 20);
-//        add_NUM.setLayoutX(180);
-//        add_NUM.setLayoutY(100);
-//
-//        add_PASP.setMinSize(50, 20);
-//        add_PASP.setLayoutX(310);
-//        add_PASP.setLayoutY(100);
-//
-//        add_PW.setMinSize(50, 20);
-//        add_PW.setLayoutX(440);
-//        add_PW.setLayoutY(100);
-//
-//        add_PD.setMinSize(50, 20);
-//
-//
-//        add_PN.setMinSize(50, 20);
-//        add_PN.setLayoutX(180);
-//        add_PN.setLayoutY(150);
-//
-//        add_PHONE.setMinSize(50, 20);
-//        add_PHONE.setLayoutX(310);
-//        add_PHONE.setLayoutY(150);
-//
-//        add_MAIL.setMinSize(50, 20);
-//        add_MAIL.setLayoutX(440);
-//        add_MAIL.setLayoutY(150);
-//
-//        add_ADDRESS.setMinSize(50, 20);
-//
-//
-//        add_ADRREG.setMinSize(50, 20);
-//        add_ADRREG.setLayoutX(180);
-//        add_ADRREG.setLayoutY(200);
-//
-//        add_AUTO.setMinSize(50, 20);
-//        add_AUTO.setLayoutX(310);
-//        add_AUTO.setLayoutY(200);
-//
-//        add_IND_DOG.setMinSize(50, 20);
-//        add_IND_DOG.setLayoutX(440);
-//        add_IND_DOG.setLayoutY(200);
-//
-//        add_INDEX.setMinSize(50, 20);
-//
-//
-//        add_SQPR.setMinSize(50, 20);
-//        add_SQPR.setLayoutX(180);
-//        add_SQPR.setLayoutY(250);
-//
-//        add_PROC.setMinSize(50, 20);
-//        add_PROC.setLayoutX(310);
-//        add_PROC.setLayoutY(250);
-//
-//        add_SQ.setMinSize(50, 20);
-//        add_SQ.setLayoutX(440);
-//        add_SQ.setLayoutY(250);
-//
-//        add_OSAVTO.setMinSize(50, 20);
-//
-//
-//        add_UR.setMinSize(50, 20);
-//        add_UR.setLayoutX(180);
-//        add_UR.setLayoutY(300);
-//
-//        add_OSSPECTR.setMinSize(50, 20);
-//        add_OSSPECTR.setLayoutX(310);
-//        add_OSSPECTR.setLayoutY(300);
-//
-//        add_NED1.setMinSize(50, 20);
-//        add_NED1.setLayoutX(440);
-//        add_NED1.setLayoutY(300);
-//
-//        add_NED2.setMinSize(50, 20);
+        tagBox_1.setLayoutX(400);
+        tagBox_1.setLayoutY(50);
 
-//        Label firstTableLabel = new Label("C:");
-//        firstTableLabel.setLayoutX(190);
-//        firstTableLabel.setLayoutY(355);
-//
-//        firstTableRecord.setMaxSize(40,20);
-//        firstTableRecord.setLayoutX(210);
-//        firstTableRecord.setLayoutY(350);
-//
-//        Label lastTableLabel = new Label("По:");
-//        lastTableLabel.setLayoutX(290);
-//        lastTableLabel.setLayoutY(355);
-//
-//        lastTableRecord.setMaxSize(40,20);
-//        lastTableRecord.setLayoutX(320);
-//        lastTableRecord.setLayoutY(350);
-//
+        tagBox_2.setLayoutX(400);
+        tagBox_2.setLayoutY(100);
+
+        tagBox_3.setLayoutX(400);
+        tagBox_3.setLayoutY(150);
+
+        tagBox_4.setLayoutX(400);
+        tagBox_4.setLayoutY(200);
+
+        tagBox_5.setLayoutX(400);
+        tagBox_5.setLayoutY(250);
+
+        tagBox_6.setLayoutX(400);
+        tagBox_6.setLayoutY(300);
+
+        tagBox_7.setLayoutX(400);
+        tagBox_7.setLayoutY(350);
+
+        tagBox_8.setLayoutX(400);
+        tagBox_8.setLayoutY(400);
+
+        tagBox_9.setLayoutX(400);
+        tagBox_9.setLayoutY(450);
+
+        tagBox_10.setLayoutX(400);
+        tagBox_10.setLayoutY(500);
+
+        tagBox_11.setLayoutX(400);
+        tagBox_11.setLayoutY(550);
+
+        tagBox_12.setLayoutX(400);
+        tagBox_12.setLayoutY(600);
+
+        tagBox_13.setLayoutX(400);
+        tagBox_13.setLayoutY(650);
+
+        tagBox_14.setLayoutX(400);
+        tagBox_14.setLayoutY(700);
+
+        tagBox_15.setLayoutX(400);
+        tagBox_15.setLayoutY(750);
+
+        tagBox_16.setLayoutX(400);
+        tagBox_16.setLayoutY(800);
+
         Button addXls = new Button("Создать xls");
         addXls.setMinSize(50, 20);
         addXls.setLayoutX(150);
@@ -367,19 +311,16 @@ public class GenDocTable {
         addDocx.setLayoutX(350);
         addDocx.setLayoutY(840);
 
-        pane.getChildren().addAll( addDocx, addXls,
-//                add_ID, add_FIO, add_DATE_REG, add_INV, add_BOX_SQ, add_NUM, add_PASP, add_PW,
-//                add_PD, add_PN, add_PHONE, add_MAIL, add_ADDRESS, add_ADRREG, add_AUTO, add_IND_DOG,
-//                add_INDEX, add_SQPR, add_PROC, add_SQ, add_OSAVTO, add_UR, add_OSSPECTR,
-//                add_NED1, add_NED2, nameTableLabel, nameTableText, firstTableRecord, lastTableRecord,
-//                firstTableLabel, lastTableLabel,
-text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, text_11, text_12, text_13, text_14, text_15, text_16,
-                tSwitch_1, tSwitch_2, tSwitch_3, tSwitch_4, tSwitch_5, tSwitch_6, tSwitch_7, tSwitch_8, tSwitch_9, tSwitch_10, tSwitch_11, tSwitch_12, tSwitch_13, tSwitch_14, tSwitch_15, tSwitch_16,
-                titleBox);
+        pane.getChildren().addAll( addDocx, addXls, nameCellLabel, nameSwitchLabel, nameTagLabel,
+            text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10,
+            text_11, text_12, text_13, text_14, text_15, text_16, tSwitch_1, tSwitch_2,
+            tSwitch_3, tSwitch_4, tSwitch_5, tSwitch_6, tSwitch_7, tSwitch_8, tSwitch_9,
+            tSwitch_10, tSwitch_11, tSwitch_12, tSwitch_13, tSwitch_14, tSwitch_15, tSwitch_16,
+            tagBox_1, tagBox_2, tagBox_3, tagBox_4, tagBox_5, tagBox_6, tagBox_7, tagBox_8,
+            tagBox_9, tagBox_10, tagBox_11, tagBox_12, tagBox_13, tagBox_14, tagBox_15, tagBox_16);
 
         addDocx.setOnAction(event -> {
             try {
-//                writeIntoExcel("documents/gen_tables/"+nameTableText.getText()+".xls", allDataU);
                 createSimpleTable();
                 parentClass.parentClass.updatePage();
                 primaryStage.close();
