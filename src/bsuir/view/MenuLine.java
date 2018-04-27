@@ -2,6 +2,7 @@ package bsuir.view;
 
 import bsuir.Main;
 import bsuir.file.GenDocFile;
+import bsuir.file.OpenTmp;
 import bsuir.file.SaveLoadFile;
 import bsuir.model.Organization;
 
@@ -22,6 +23,7 @@ public class MenuLine extends MenuBar {
     public Main parentClass;
     public MyTable myTable;
     public GenDocFile genFile;
+    public OpenTmp openTmp;
 
     List <Organization> inU = FXCollections.observableArrayList();
 
@@ -60,6 +62,7 @@ public class MenuLine extends MenuBar {
 
         MenuItem genRandstm = new MenuItem("Создать для одного");
         MenuItem gen_randstms = new MenuItem("Создать для всех");
+        MenuItem editTmp = new MenuItem("Редактировать шаблон");
 
         MenuItem addDocTable = new MenuItem("Создать таблицу");
 
@@ -67,7 +70,7 @@ public class MenuLine extends MenuBar {
 
         file.getItems().addAll(newFile, loadFile, saveFile);
         actions.getItems().addAll(addRecord, findRecord);
-        documents.getItems().addAll(genRandstm, gen_randstms);
+        documents.getItems().addAll(genRandstm, gen_randstms, editTmp);
 
         genTable.getItems().addAll(addDocTable);
 
@@ -198,6 +201,26 @@ public class MenuLine extends MenuBar {
                 Stage stage = new Stage();
                 List <Organization> allDataU = myTable.getDataU();
                 GDTable.start(stage, allDataU, MenuLine.this);
+            }
+            catch (Exception e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Создайте файл!");
+                alert.showAndWait();
+            }
+        });
+
+        editTmp.setAccelerator(KeyCombination.keyCombination("Ctrl+E"));
+
+        editTmp.setOnAction(event -> {
+
+            OpenTmp openTmp = new OpenTmp();
+            try
+            {
+                Stage stage = new Stage();
+                openTmp.start(stage,MenuLine.this);
             }
             catch (Exception e)
             {
