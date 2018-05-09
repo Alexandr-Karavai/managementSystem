@@ -9,9 +9,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
-import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
-import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
@@ -19,24 +17,14 @@ import org.apache.poi.xwpf.usermodel.XWPFRun;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class OpenTmp {
 
     TextArea textArea = new TextArea();
-//
+
     public String styleFile;
-//
-//    public boolean Both;
-//    public boolean Italic;
-//    public boolean Strike;
-//
-//    public String aligment;
-//    public String styleP;
-//
-//    public int fontSize;
 
     public void start(final Stage primaryStage, final MenuLine parentClass) {
 
@@ -163,7 +151,7 @@ public class OpenTmp {
         String filename = filePath;
 
         try {
-            
+            Runtime.getRuntime().exec("cmd /C " + filePath);
             XWPFDocument docx = new XWPFDocument(new FileInputStream(filename));
             XWPFWordExtractor we = new XWPFWordExtractor(docx);
             textArea.setText(we.getText());
@@ -193,107 +181,24 @@ public class OpenTmp {
         FileOutputStream out = new FileOutputStream(new File("documents/templates/"+result.get()+".docx"));
 
         //create Paragraph
-
         List dgf = textArea.getParagraphs();
 
-//        style(styleFile);
-
         for(Object person : dgf){
-
             XWPFParagraph paragraph = document.createParagraph();
             XWPFRun run = paragraph.createRun();
-//            paragraph.setAlignment(ParagraphAlignment.CENTER);
-
             run.setText(person.toString());
-
-//            run.setBold(Both);
-//            run.setFontSize(fontSize);
-//            run.setItalic(Italic);
-//            run.setStrike(Strike);
-////            System.out.println(person.toString());
-
         }
-
-
-
         document.write(out);
         out.flush();
         out.close();
     }
-
-//    public void style(String fileName) {
-//        try {
-//            FileInputStream fis = new FileInputStream(fileName);
-//            XWPFDocument xdoc = new XWPFDocument(OPCPackage.open(fis));
-//
-//            List <XWPFParagraph> paragraphList = xdoc.getParagraphs();
-//
-//            for (XWPFParagraph paragraph : paragraphList) {
-//
-//                for (XWPFRun rn : paragraph.getRuns()) {
-//
-//                    Both = rn.isBold();
-//                    Strike = rn.isStrike();
-//                    Italic = rn.isItalic();
-//                    fontSize = rn.getFontSize();
-//                    aligment = paragraph.getAlignment().toString();
-//                    paragraph.getRuns().size();
-//
-////                    System.out.println(rn.isBold());
-////                    System.out.println(rn.isStrike());
-////                    System.out.println(rn.isItalic());
-////                    System.out.println(rn.getFontSize());
-////
-////                    System.out.println(paragraph.getText());
-////                    System.out.println(paragraph.getAlignment());
-////                    System.out.print(paragraph.getRuns().size());
-////                    System.out.println(paragraph.getStyle());
-////
-////                System.out.println("=====================================================================");
-//                }
-//
-//                System.out.println("********************************************************************");
-//                styleP = paragraph.getStyle();
-////                paragraph.setStyle();
-//            }
-//        } catch (Exception ex) {
-//            ex.printStackTrace();
-//        }
-//
-//    }
-
-//    public void parag() {
-//        try {
-//            FileInputStream fis = new FileInputStream("test.docx");
-//            XWPFDocument xdoc = new XWPFDocument(OPCPackage.open(fis));
-//
-//            List paragraphList = xdoc.getParagraphs();
-//
-//            for (XWPFParagraph paragraph : paragraphList) {
-//
-//                System.out.println(paragraph.getText());
-//                System.out.println(paragraph.getAlignment());
-//                System.out.print(paragraph.getRuns().size());
-//                System.out.println(paragraph.getStyle());
-//
-//                // Returns numbering format for this paragraph, eg bullet or lowerLetter.
-//                System.out.println(paragraph.getNumFmt());
-//                System.out.println(paragraph.getAlignment());
-//
-//                System.out.println(paragraph.isWordWrapped());
-//
-//                System.out.println("********************************************************************");
-//            }
-//        } catch (Exception ex) {
-//            ex.printStackTrace();
-//        }
-//    }
 
 
     public void readDocFile(String fileName) {
 
         try {
             File file = new File(fileName);
+            Runtime.getRuntime().exec("cmd /C " + fileName);
             FileInputStream fis = new FileInputStream(file.getAbsolutePath());
 
             HWPFDocument doc = new HWPFDocument(fis);
