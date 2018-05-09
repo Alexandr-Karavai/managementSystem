@@ -3,7 +3,7 @@
 //import bsuir.controller.Components;
 //import bsuir.model.Organization;
 //import bsuir.view.MenuLine;
-//import bsuir.view.MyTable;
+//import bsuir.view.TableOwners;
 //import javafx.beans.value.ChangeListener;
 //import javafx.beans.value.ObservableValue;
 //import javafx.collections.FXCollections;
@@ -37,7 +37,7 @@
 //    private TextField faculty;
 //
 //    private ObservableList<Organization> result;
-//    private MyTable resultTable;
+//    private TableOwners resultTable;
 //    private MenuLine parentClass;
 //    private Stage thisStage;
 //    private VBox resBox;
@@ -336,7 +336,7 @@
 //
 //    public void adding (List <Organization> result)
 //    {
-//        resultTable = new MyTable ();
+//        resultTable = new TableOwners ();
 //        resultTable.setDataU(result);
 //        VBox table = new VBox();
 //        table.getChildren().add(resultTable);

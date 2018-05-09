@@ -21,7 +21,7 @@ public class MenuLine extends MenuBar {
     public SaveLoadFile workFile = new SaveLoadFile();
     BorderPane source;
     public Main parentClass;
-    public MyTable myTable;
+    public TableOwners tableOwners;
     public GenDocFile genFile;
     public OpenTmp openTmp;
 
@@ -79,10 +79,10 @@ public class MenuLine extends MenuBar {
         newFile.setAccelerator(KeyCombination.keyCombination("Ctrl+N"));
 
         newFile.setOnAction(event -> {
-            myTable = new MyTable();
-            source.setCenter(myTable);
+            tableOwners = new TableOwners();
+            source.setCenter(tableOwners);
             List <Organization> inU = FXCollections.observableArrayList();
-            myTable.setDataU(inU);
+            tableOwners.setDataU(inU);
             parentClass.creatingLoadingTable();
         });
 
@@ -90,7 +90,7 @@ public class MenuLine extends MenuBar {
 
         saveFile.setOnAction(event -> {
             File file1 = fileChooser.showSaveDialog(null);
-            List <Organization> allDataU = myTable.getDataU();
+            List <Organization> allDataU = tableOwners.getDataU();
             workFile.setDb(allDataU);
             workFile.dbWrite(file1.getAbsolutePath());
         });
@@ -102,10 +102,10 @@ public class MenuLine extends MenuBar {
             try
             {
                 workFile.dbRead(file1.getAbsolutePath());
-                myTable = new MyTable();
-                source.setCenter(myTable);
+                tableOwners = new TableOwners();
+                source.setCenter(tableOwners);
                 inU.addAll(workFile.getDb());
-                myTable.setDataU(inU);
+                tableOwners.setDataU(inU);
                 parentClass.creatingLoadingTable();
             }
             catch (Exception e)
@@ -125,7 +125,7 @@ public class MenuLine extends MenuBar {
             try
             {
                 Stage stage = new Stage();
-                List <Organization> allDataU = myTable.getDataU();
+                List <Organization> allDataU = tableOwners.getDataU();
                 ARDialog.start(stage, allDataU, MenuLine.this);
             }
             catch (Exception e)
@@ -142,7 +142,7 @@ public class MenuLine extends MenuBar {
 //            try
 //            {
 //                Stage stage = new Stage();
-//                List <Organization> allData = myTable.getDataU();
+//                List <Organization> allData = tableOwners.getDataU();
 //                SearchDelete FRDialog = new SearchDelete();
 //                FRDialog.start(stage, allData, MenuLine.this);
 //            }
@@ -199,7 +199,7 @@ public class MenuLine extends MenuBar {
             try
             {
                 Stage stage = new Stage();
-                List <Organization> allDataU = myTable.getDataU();
+                List <Organization> allDataU = tableOwners.getDataU();
                 GDTable.start(stage, allDataU, MenuLine.this);
             }
             catch (Exception e)

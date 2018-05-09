@@ -3,11 +3,9 @@ package bsuir;
 import bsuir.controller.Components;
 import bsuir.view.MenuLine;
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -42,7 +40,7 @@ public class Main extends Application {
     }
 
     public void creatingLoadingTable() {
-        components.setTable(menuLine.myTable);
+        components.setTable(menuLine.tableOwners);
         components.setVisible(true);
     }
 

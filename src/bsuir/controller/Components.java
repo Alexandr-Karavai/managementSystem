@@ -2,7 +2,7 @@
 package bsuir.controller;
 
 import bsuir.model.Organization;
-import bsuir.view.MyTable;
+import bsuir.view.TableOwners;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -45,7 +45,7 @@ public class Components extends HBox
 
     VBox allComponents = new VBox();
 
-    MyTable myTable;
+    TableOwners tableOwners;
 
     int allCountRecords;
     int countRecordsPerPage = 10;
@@ -109,9 +109,9 @@ public class Components extends HBox
         });
     }
 
-    public void setTable(MyTable table)
+    public void setTable(TableOwners table)
     {
-        myTable = table;
+        tableOwners = table;
         allDataU = (ObservableList<Organization>) table.getDataU();
         allCountRecords = allDataU.size();
         allCountPage = allCountRecords / countRecordsPerPage;
@@ -143,7 +143,7 @@ public class Components extends HBox
             if (i < allCountRecords)
               pageDataU.add(allDataU.get(i));
         }
-             myTable.setItems(pageDataU);
+             tableOwners.setItems(pageDataU);
         currentAllPages.setText(pageNumber+"/"+allCountPage);
     }
 }

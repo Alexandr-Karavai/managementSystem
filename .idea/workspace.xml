@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4cff6a-4f0f-45bf-bc7b-aa4ac7f661e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" afterPath="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Найденова Виола Валерьевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Рожков Сергей.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Рожкова Лидия Николаевна.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Рожкова Лидия Николаевна2.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Цымбалов Дмитрий Нилович.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/gen_doc/Заявление_Рожкова Лидия Николаевна2.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/templates/test.docx" afterPath="$PROJECT_DIR$/documents/templates/test.docx" />
+      <change beforePath="$PROJECT_DIR$/documents/templates/Заявление_шаблон.docx" afterPath="$PROJECT_DIR$/documents/templates/Заявление_шаблон.docx" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/Main.java" afterPath="$PROJECT_DIR$/src/bsuir/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/controller/Components.java" afterPath="$PROJECT_DIR$/src/bsuir/controller/Components.java" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" afterPath="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/file/SearchDelete.java" afterPath="$PROJECT_DIR$/src/bsuir/file/SearchDelete.java" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" afterPath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/view/MyTable.java" afterPath="$PROJECT_DIR$/src/bsuir/view/TableOwners.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,10 +36,11 @@
       <file leaf-file-name="GenDocFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-748">
-              <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+            <state relative-caret-position="323">
+              <caret line="661" column="74" lean-forward="false" selection-start-line="661" selection-start-column="74" selection-end-line="661" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#genDocxTmpFile#0;class#GenDocFile#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -51,14 +66,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpenTmp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OpenTmp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1558">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="210">
+              <caret line="151" column="4" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="158" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,35 +91,35 @@
       <file leaf-file-name="MenuLine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3349">
-              <caret line="214" column="68" lean-forward="false" selection-start-line="214" selection-start-column="68" selection-end-line="214" selection-end-column="68" />
+            <state relative-caret-position="-3003">
+              <caret line="53" column="98" lean-forward="false" selection-start-line="53" selection-start-column="98" selection-end-line="53" selection-end-column="98" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4265#4862#0" expanded="false" />
+                <element signature="e#4328#4929#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchDelete.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/file/SearchDelete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4318">
-              <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="266" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/MyTable.java">
+      <file leaf-file-name="TableOwners.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/view/TableOwners.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="5661">
               <caret line="348" column="0" lean-forward="false" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
               <folding>
-                <element signature="e#19471#19472#0" expanded="true" />
-                <element signature="e#19507#19508#0" expanded="true" />
+                <element signature="e#19479#19480#0" expanded="true" />
+                <element signature="e#19515#19516#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Components.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/controller/Components.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1071">
+              <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,8 +139,8 @@
       <file leaf-file-name="GenDocTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1411">
-              <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+            <state relative-caret-position="442">
+              <caret line="43" column="47" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createSimpleTable#0;class#GenDocTable#0" expanded="false" />
@@ -177,10 +202,11 @@
         <option value="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/MyTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/genTableView.fxml" />
-        <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/view/TableOwners.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
       </list>
     </option>
   </component>
@@ -206,6 +232,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,7 +288,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -274,6 +300,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2908046" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -439,25 +466,25 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14114584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20360552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26193002" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26193002" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20360552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -509,17 +536,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="102">
             <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -562,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/event/Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2737">
@@ -583,21 +603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/controller/Components.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/MenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6205">
           <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
-          <folding>
-            <element signature="e#15839#15840#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,21 +650,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MyTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5661">
-          <caret line="348" column="0" lean-forward="false" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
-          <folding>
-            <element signature="e#19471#19472#0" expanded="true" />
-            <element signature="e#19507#19508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/AddDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/TableOwners.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5661">
+          <caret line="348" column="0" lean-forward="false" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
+          <folding>
+            <element signature="e#19479#19480#0" expanded="true" />
+            <element signature="e#19515#19516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/controller/Components.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -668,31 +685,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
+    <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3349">
-          <caret line="214" column="68" lean-forward="false" selection-start-line="214" selection-start-column="68" selection-end-line="214" selection-end-column="68" />
+        <state relative-caret-position="323">
+          <caret line="661" column="74" lean-forward="false" selection-start-line="661" selection-start-column="74" selection-end-line="661" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4265#4862#0" expanded="false" />
+            <element signature="method#genDocxTmpFile#0;class#GenDocFile#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/file/GenDocFile.java">
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        <state relative-caret-position="-3003">
+          <caret line="53" column="98" lean-forward="false" selection-start-line="53" selection-start-column="98" selection-end-line="53" selection-end-column="98" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4328#4929#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1411">
-          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+        <state relative-caret-position="442">
+          <caret line="43" column="47" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createSimpleTable#0;class#GenDocTable#0" expanded="false" />
@@ -703,11 +721,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1558">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="210">
+          <caret line="151" column="4" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="158" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

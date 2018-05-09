@@ -11,11 +11,11 @@ import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.util.List;
 
-public class MyTable extends TableView {
+public class TableOwners extends TableView {
 
     private List<Organization> usersData = FXCollections.observableArrayList();
 
-    public MyTable()
+    public TableOwners()
     {
 
         this.setEditable(false);
