@@ -51,7 +51,7 @@ public class MenuLine extends MenuBar {
 
         final FileChooser templateChooser = new FileChooser();
         templateChooser.setTitle("Открыть шаблон");
-        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("файл (*.doc)", "*.doc");
+        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("файлы (*.doc, *.docx)", "*.doc", "*.docx");
         templateChooser.getExtensionFilters().add(filter);
 
         final MenuItem newFile = new MenuItem("Новый реестр");
@@ -160,7 +160,11 @@ public class MenuLine extends MenuBar {
             try
             {
                 genFile = new GenDocFile();
-                genFile.genRandTmp(tempFile.getAbsolutePath(), inU, myTable);
+                if ( getFileExtension(tempFile).equals("doc")) {
+                    genFile.genRandTmp(tempFile.getAbsolutePath(), inU, tableOwners);
+                } else {
+                    genFile.genDocxTmpFile(tempFile.getAbsolutePath(), inU, tableOwners);
+                }
             }
             catch (Exception e)
             {
@@ -179,7 +183,12 @@ public class MenuLine extends MenuBar {
             try
             {
                 genFile = new GenDocFile();
-                genFile.genRandTmpPackage(tempFile.getAbsolutePath(), inU, myTable);
+                if ( getFileExtension(tempFile).equals("doc")) {
+                    genFile.genRandTmpPackage(tempFile.getAbsolutePath(), inU, tableOwners);
+                } else {
+                    genFile.genDocxTmpPackageFile(tempFile.getAbsolutePath(), inU, tableOwners);
+                }
+
             }
             catch (Exception e)
             {
@@ -253,5 +262,14 @@ public class MenuLine extends MenuBar {
             }
         });
 
+    }
+
+    private String getFileExtension(File file) {
+        String name = file.getName();
+        try {
+            return name.substring(name.lastIndexOf(".") + 1);
+        } catch (Exception e) {
+            return "";
+        }
     }
 }
