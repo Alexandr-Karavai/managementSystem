@@ -30,5 +30,14 @@ public class TagsForFile {
     public static String OSSPECTR = "OSSPECTR";
     public static String NED_1 = "NED_1";
     public static String NED_2 = "NED_2";
+
+    public static String payers = "payers";
+    public static String payer = "payer";
+    public static String accountingMonth = "accountingMonth";
+
+    public static String DATE_ACC = "DATE_ACC";
+    public static String HOT_WATER = "HOT_WATER";
+    public static String COLD_WATER = "COLD_WATER";
+    public static String ELECTRIC_POWER = "ELECTRIC_POWER";
 }
 

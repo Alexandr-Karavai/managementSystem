@@ -1,11 +1,14 @@
 package bsuir.view;
 
 import bsuir.Main;
+import bsuir.controller.ComponentsPayer;
 import bsuir.file.GenDocFile;
+import bsuir.file.LoadPayerDB;
 import bsuir.file.OpenTmp;
 import bsuir.file.SaveLoadFile;
 import bsuir.model.Organization;
 
+import bsuir.model.Payer;
 import javafx.collections.FXCollections;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCombination;
@@ -24,8 +27,10 @@ public class MenuLine extends MenuBar {
     public TableOwners tableOwners;
     public GenDocFile genFile;
     public OpenTmp openTmp;
+    public Accounting accounting;
 
     List <Organization> inU = FXCollections.observableArrayList();
+
 
 
     public MenuLine(BorderPane source, Main parentClass)
@@ -40,9 +45,10 @@ public class MenuLine extends MenuBar {
         Menu actions = new Menu("Редактировать");
         Menu documents = new Menu("Документы");
         Menu genTable = new Menu("Таблица");
+        Menu accountingMenu = new Menu("Учет");
         Menu about = new Menu ("Справка");
 
-        this.getMenus().addAll(file, actions, documents, genTable, about);
+        this.getMenus().addAll(file, actions, documents, genTable, accountingMenu, about);
 
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Открытие файла");
@@ -66,6 +72,8 @@ public class MenuLine extends MenuBar {
 
         MenuItem addDocTable = new MenuItem("Создать таблицу");
 
+        MenuItem addAccounting = new MenuItem("Открыть");
+
         MenuItem info = new MenuItem ("О программе");
 
         file.getItems().addAll(newFile, loadFile, saveFile);
@@ -73,6 +81,8 @@ public class MenuLine extends MenuBar {
         documents.getItems().addAll(genRandstm, gen_randstms, editTmp);
 
         genTable.getItems().addAll(addDocTable);
+
+        accountingMenu.getItems().addAll(addAccounting);
 
         about.getItems().addAll(info);
 
@@ -230,6 +240,26 @@ public class MenuLine extends MenuBar {
             {
                 Stage stage = new Stage();
                 openTmp.start(stage,MenuLine.this);
+            }
+            catch (Exception e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Ошибка");
+                alert.setContentText("");
+                alert.setHeaderText("Ошибка: Создайте файл!");
+                alert.showAndWait();
+            }
+        });
+
+        addAccounting.setAccelerator(KeyCombination.keyCombination("Ctrl+Y"));
+
+        addAccounting.setOnAction(event -> {
+
+            Accounting accounting = new Accounting();
+            try
+            {
+                Stage stage = new Stage();
+                accounting.start(stage, inU, tableOwners);
             }
             catch (Exception e)
             {

@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <organization>
   <organization>
     <owner>
       <ID>1</ID>
       <FIO>Рожкова Лидия Николаевна</FIO>
-      <DATE_REG>sgdfgdfg</DATE_REG>
-      <INV>qwe</INV>
+      <DATE_REG>17.10.2015</DATE_REG>
+      <INV>45702035001</INV>
       <BOX_SQ>19,6</BOX_SQ>
-      <NUM>sgdfgdfg</NUM>
-      <PASP>qwe</PASP>
+      <NUM>211734</NUM>
+      <PASP>HB</PASP>
       <PW>Буда-Кошелевское РОВД Гомельской области</PW>
       <PD>13.07.1998</PD>
       <PN>qwe</PN>
@@ -32,12 +32,12 @@
   <organization>
     <owner>
       <ID>2</ID>
-      <FIO>Рожков Сергей</FIO>
-      <DATE_REG>sgdfgdfg</DATE_REG>
-      <INV>qwe</INV>
-      <BOX_SQ>qwe</BOX_SQ>
-      <NUM>sgdfgdfg</NUM>
-      <PASP>qwe</PASP>
+      <FIO>Рожков Сергей Владиславович</FIO>
+      <DATE_REG>14.11.2016</DATE_REG>
+      <INV>45702035002</INV>
+      <BOX_SQ>23,6</BOX_SQ>
+      <NUM>211738</NUM>
+      <PASP>AB</PASP>
       <PW>qwe</PW>
       <PD>sgdfgdfg</PD>
       <PN>qwe</PN>
@@ -62,11 +62,11 @@
     <owner>
       <ID>3</ID>
       <FIO>Найденова Виола Валерьевна</FIO>
-      <DATE_REG>sgdfgdfg</DATE_REG>
-      <INV>qwe</INV>
-      <BOX_SQ>qwe</BOX_SQ>
-      <NUM>sgdfgdfg</NUM>
-      <PASP>qwe</PASP>
+      <DATE_REG>19.05.2012</DATE_REG>
+      <INV>45702035003</INV>
+      <BOX_SQ>19,9</BOX_SQ>
+      <NUM>214534</NUM>
+      <PASP>KH</PASP>
       <PW>qwe</PW>
       <PD>sgdfgdfg</PD>
       <PN>qwe</PN>
@@ -91,11 +91,11 @@
     <owner>
       <ID>4</ID>
       <FIO>Цымбалов Дмитрий Нилович</FIO>
-      <DATE_REG>sgdfgdfg</DATE_REG>
-      <INV>qwe</INV>
-      <BOX_SQ>qwe</BOX_SQ>
-      <NUM>sgdfgdfg</NUM>
-      <PASP>qwe</PASP>
+      <DATE_REG>25.07.2018</DATE_REG>
+      <INV>45702035004</INV>
+      <BOX_SQ>25,6</BOX_SQ>
+      <NUM>751348</NUM>
+      <PASP>MP</PASP>
       <PW>qwe</PW>
       <PD>sgdfgdfg</PD>
       <PN>qwe</PN>
@@ -119,12 +119,12 @@
   <organization>
     <owner>
       <ID>5</ID>
-      <FIO>Рожкова Лидия Николаевна2</FIO>
-      <DATE_REG>sgdfgdfg</DATE_REG>
-      <INV>qwe</INV>
+      <FIO>Рожкова Оксана Николаевна</FIO>
+      <DATE_REG>04.02.2015</DATE_REG>
+      <INV>45702035005</INV>
       <BOX_SQ>19,6</BOX_SQ>
-      <NUM>sgdfgdfg</NUM>
-      <PASP>qwe</PASP>
+      <NUM>315762</NUM>
+      <PASP>BM</PASP>
       <PW>Буда-Кошелевское РОВД Гомельской области</PW>
       <PD>13.07.1998</PD>
       <PN>qwe</PN>

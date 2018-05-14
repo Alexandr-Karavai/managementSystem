@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payer>
+  <payer>
+    <ID>1</ID>
+    <FIO>Рожкова Лидия Николаевна</FIO>
+    <accountingMonth>
+      <DATE_ACC>01.05.2018</DATE_ACC>
+      <HOT_WATER>25</HOT_WATER>
+      <COLD_WATER>41</COLD_WATER>
+      <ELECTRIC_POWER>0013</ELECTRIC_POWER>
+    </accountingMonth>
+    <accountingMonth>
+      <DATE_ACC>01.06.2018</DATE_ACC>
+      <HOT_WATER>45</HOT_WATER>
+      <COLD_WATER>78</COLD_WATER>
+      <ELECTRIC_POWER>0236</ELECTRIC_POWER>
+    </accountingMonth>
+  </payer>
+  <payer>
+    <ID>2</ID>
+    <FIO>Рожков Сергей Владиславович</FIO>
+    <accountingMonth>
+      <DATE_ACC>01.05.2017</DATE_ACC>
+      <HOT_WATER>25</HOT_WATER>
+      <COLD_WATER>41</COLD_WATER>
+      <ELECTRIC_POWER>00135</ELECTRIC_POWER>
+    </accountingMonth>
+  </payer>
+  <payer>
+    <ID>3</ID>
+    <FIO>Найденова Виола Валерьевна</FIO>
+    <accountingMonth>
+      <DATE_ACC>01.05.2048</DATE_ACC>
+      <HOT_WATER>25</HOT_WATER>
+      <COLD_WATER>41</COLD_WATER>
+      <ELECTRIC_POWER>00135</ELECTRIC_POWER>
+    </accountingMonth>
+  </payer>
+  <payer>
+    <ID>4</ID>
+    <FIO>Цымбалов Дмитрий Нилович</FIO>
+    <accountingMonth>
+      <DATE_ACC>asasf</DATE_ACC>
+      <HOT_WATER>asfasf</HOT_WATER>
+      <COLD_WATER>asfas</COLD_WATER>
+      <ELECTRIC_POWER>fasfasf</ELECTRIC_POWER>
+    </accountingMonth>
+  </payer>
+  <payer>
+    <ID>5</ID>
+    <FIO>Рожкова Оксана Николаевна</FIO>
+    <accountingMonth>
+      <DATE_ACC>14.05.2018</DATE_ACC>
+      <HOT_WATER>21</HOT_WATER>
+      <COLD_WATER>45</COLD_WATER>
+      <ELECTRIC_POWER>459</ELECTRIC_POWER>
+    </accountingMonth>
+    <accountingMonth>
+      <DATE_ACC>kl</DATE_ACC>
+      <HOT_WATER>kl;kl;kl;</HOT_WATER>
+      <COLD_WATER>k;k</COLD_WATER>
+      <ELECTRIC_POWER>kl;</ELECTRIC_POWER>
+    </accountingMonth>
+  </payer>
+</payer>
