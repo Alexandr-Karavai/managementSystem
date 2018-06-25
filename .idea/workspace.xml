@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4cff6a-4f0f-45bf-bc7b-aa4ac7f661e3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/controller/ComponentsPayer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/file/LoadPayerDB.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/model/AccountingMonth.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/model/Payer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/view/Accounting.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/view/AddAccounting.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/bsuir/view/TablePayers.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_opencsv_opencsv_4_1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Найденова Виола Валерьевна.doc" afterPath="" />
       <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Рожков Сергей.doc" afterPath="" />
@@ -16,10 +10,11 @@
       <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Рожкова Лидия Николаевна2.doc" afterPath="" />
       <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Цымбалов Дмитрий Нилович.doc" afterPath="" />
       <change beforePath="$PROJECT_DIR$/documents/gen_doc/Заявление_Рожкова Лидия Николаевна2.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/documents/payer.xml" afterPath="$PROJECT_DIR$/documents/payer.xml" />
       <change beforePath="$PROJECT_DIR$/documents/templates/test.docx" afterPath="$PROJECT_DIR$/documents/templates/test.docx" />
       <change beforePath="$PROJECT_DIR$/documents/templates/Заявление_шаблон.docx" afterPath="$PROJECT_DIR$/documents/templates/Заявление_шаблон.docx" />
-      <change beforePath="$PROJECT_DIR$/documents/Реестр.xml" afterPath="$PROJECT_DIR$/documents/Реестр.xml" />
-      <change beforePath="$PROJECT_DIR$/src/bsuir/TagsForFile.java" afterPath="$PROJECT_DIR$/src/bsuir/TagsForFile.java" />
+      <change beforePath="$PROJECT_DIR$/managementSystem.iml" afterPath="$PROJECT_DIR$/managementSystem.iml" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java" afterPath="$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java" />
       <change beforePath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" afterPath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
       <change beforePath="$PROJECT_DIR$/src/bsuir/view/TableOwners.java" afterPath="$PROJECT_DIR$/src/bsuir/view/TableOwners.java" />
     </list>
@@ -38,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Accounting.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Accounting.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/view/Accounting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="46" column="44" lean-forward="true" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="72" />
+            <state relative-caret-position="527">
+              <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,46 +45,77 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddAccounting.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/AddAccounting.java">
+      <file leaf-file-name="SearchDelete.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/file/SearchDelete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="36" />
+            <state relative-caret-position="4318">
+              <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="266" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableOwners.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/TableOwners.java">
+      <file leaf-file-name="MenuLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="342">
+              <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+              <folding>
+                <element signature="e#5592#5635#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SaveLoadFile.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11">
+              <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
+              <folding>
+                <element signature="method#dbWrite#1;class#SaveLoadFile#0" expanded="false" />
+                <element signature="method#writeCsv#0;class#SaveLoadFile#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payer.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/documents/payer.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1054">
+              <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComponentsPayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/controller/ComponentsPayer.java">
+      <file leaf-file-name="OpenTmp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="114" column="64" lean-forward="false" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="544">
+              <caret line="50" column="35" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Owner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/model/Owner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="51" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Organization.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="97" column="5" lean-forward="false" selection-start-line="92" selection-start-column="3" selection-end-line="97" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,39 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadPayerDB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/file/LoadPayerDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3343">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7689#7690#0" expanded="true" />
-                <element signature="e#7714#7715#0" expanded="true" />
-                <element signature="e#7770#7771#0" expanded="true" />
-                <element signature="e#7798#7799#0" expanded="true" />
-                <element signature="e#7844#7845#0" expanded="true" />
-                <element signature="e#7872#7873#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AccountingMonth.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/model/AccountingMonth.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Organization.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="97" column="5" lean-forward="false" selection-start-line="92" selection-start-column="3" selection-end-line="97" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -188,29 +186,29 @@
         <option value="$PROJECT_DIR$/src/bsuir/model/Organization.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/SearchDelete.java" />
         <option value="$PROJECT_DIR$/src/bsuir/controller/Components.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/MyTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/genTableView.fxml" />
         <option value="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
         <option value="$PROJECT_DIR$/src/bsuir/model/AccountingMonth.java" />
         <option value="$PROJECT_DIR$/src/bsuir/TagsForFile.java" />
         <option value="$PROJECT_DIR$/src/bsuir/controller/ComponentsPayer.java" />
         <option value="$PROJECT_DIR$/src/bsuir/Main.java" />
-        <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/TablePayers.java" />
         <option value="$PROJECT_DIR$/src/bsuir/model/Payer.java" />
-        <option value="$PROJECT_DIR$/documents/payer.xml" />
         <option value="$PROJECT_DIR$/src/bsuir/view/AddAccounting.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/TableOwners.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/LoadPayerDB.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/Accounting.java" />
+        <option value="$PROJECT_DIR$/documents/payer.xml" />
+        <option value="$PROJECT_DIR$/src/bsuir/file/OpenTmp.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -231,10 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,6 +284,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,7 +453,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -465,7 +464,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -599,16 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/TagsForFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -621,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="386" column="0" lean-forward="false" selection-start-line="386" selection-start-column="0" selection-end-line="386" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,9 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-          <folding>
-            <element signature="e#5253#5254#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -667,9 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="724" column="0" lean-forward="false" selection-start-line="724" selection-start-column="0" selection-end-line="724" selection-end-column="0" />
-          <folding>
-            <element signature="e#25725#25726#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="637">
           <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,14 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Owner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -736,64 +709,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/file/SearchDelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4318">
-          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="266" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="197" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1564">
-          <caret line="138" column="56" lean-forward="false" selection-start-line="138" selection-start-column="48" selection-end-line="138" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5247#5290#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="97" column="5" lean-forward="false" selection-start-line="92" selection-start-column="3" selection-end-line="97" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/controller/ComponentsPayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
+        <state relative-caret-position="1717">
           <caret line="114" column="64" lean-forward="false" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/AddAccounting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="374">
           <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
+        <state relative-caret-position="612">
           <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="36" />
           <folding />
         </state>
@@ -801,7 +739,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/TableOwners.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="187">
           <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
           <folding />
         </state>
@@ -815,26 +753,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/documents/payer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/file/LoadPayerDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3343">
+        <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7689#7690#0" expanded="true" />
-            <element signature="e#7714#7715#0" expanded="true" />
-            <element signature="e#7770#7771#0" expanded="true" />
-            <element signature="e#7798#7799#0" expanded="true" />
-            <element signature="e#7844#7845#0" expanded="true" />
-            <element signature="e#7872#7873#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7689#7690#0" expanded="false" />
+            <element signature="e#7714#7715#0" expanded="false" />
+            <element signature="e#7770#7771#0" expanded="false" />
+            <element signature="e#7798#7799#0" expanded="false" />
+            <element signature="e#7844#7845#0" expanded="false" />
+            <element signature="e#7872#7873#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -857,10 +787,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/Accounting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="46" column="44" lean-forward="true" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="72" />
+        <state relative-caret-position="527">
+          <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/payer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/file/OpenTmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="50" column="35" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Owner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="97" column="5" lean-forward="false" selection-start-line="92" selection-start-column="3" selection-end-line="97" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/file/SearchDelete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4318">
+          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="266" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+          <folding>
+            <element signature="e#5592#5635#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
+          <folding>
+            <element signature="method#dbWrite#1;class#SaveLoadFile#0" expanded="false" />
+            <element signature="method#writeCsv#0;class#SaveLoadFile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -930,7 +921,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jdom-2.0.6</last-edited>
+          <last-edited>com.opencsv:opencsv:4.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

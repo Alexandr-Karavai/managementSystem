@@ -3,6 +3,8 @@ package bsuir.file;
 import bsuir.TagsForFile;
 import bsuir.model.Owner;
 import bsuir.model.Organization;
+import com.opencsv.CSVReader;
+import com.opencsv.CSVWriter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -14,8 +16,10 @@ import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 public class SaveLoadFile {
@@ -192,6 +196,82 @@ public class SaveLoadFile {
             xmlOutput.setFormat(Format.getPrettyFormat());
             xmlOutput.output(doc, new FileWriter(filePath));
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readCsv(String filepath ){
+        try {
+            db.clear();
+            //Build reader instance
+            CSVReader reader = new CSVReader(new FileReader(filepath), ',', '"', 0);
+            //Read all rows at once
+            List<String[]> allRows = reader.readAll();
+            //Read CSV line by line and use the string array as you want
+
+            Owner ownerOrganization;
+
+            for(String[] row : allRows){
+                System.out.println(Arrays.toString(row));
+
+                ownerOrganization = new Owner(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], row[16]);
+                db.add(new Organization(ownerOrganization, row[17], row[18], row[19], row[20], row[21], row[22], row[23], row[24]));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void writeCsv(String filePath) {
+        try {
+
+            String csv = "data.csv";
+
+            CSVWriter writer = new CSVWriter(new FileWriter(filePath));
+
+            for (int i = 0; i < db.size(); i++) {
+                Organization dbOrganization = db.get(i);
+
+                String ID = dbOrganization.getId();
+                String FIO = dbOrganization.getFio();
+                String DATE_REG = dbOrganization.getDateReg();
+                String INV = dbOrganization.getInv();
+                String BOX_SQ = dbOrganization.getBoxSq();
+                String NUM = dbOrganization.getNum();
+                String PASP = dbOrganization.getPasp();
+                String PW = dbOrganization.getPw();
+                String PD = dbOrganization.getPd();
+                String PN = dbOrganization.getPn();
+                String PHONE = dbOrganization.getPhone();
+                String MAIL = dbOrganization.getMail();
+                String ADDRESS = dbOrganization.getAddress();
+                String ADRREG = dbOrganization.getAdrreg();
+                String AUTO = dbOrganization.getAuto();
+                String IND_DOG = dbOrganization.getIndDog();
+                String INDEX = dbOrganization.getIndex();
+                String SQPR = dbOrganization.getSqpr();
+                String PROC = dbOrganization.getProc();
+                String SQ = dbOrganization.getSq();
+                String OSAVTO = dbOrganization.getOsavto();
+                String UR = dbOrganization.getUr();
+                String OSSPECTR = dbOrganization.getOsspectr();
+                String NED_1 = dbOrganization.getNed_1();
+                String NED_2 = dbOrganization.getNed_2();
+
+                //Create record
+                String[] record = {ID, FIO, DATE_REG, INV, BOX_SQ, NUM, PASP,
+                        PW, PD, PN, PHONE, MAIL, ADDRESS, ADRREG, AUTO, IND_DOG,
+                        INDEX, SQPR, PROC, SQ, OSAVTO, UR, OSSPECTR, NED_1, NED_2};
+
+                //Write the record to file
+                writer.writeNext(record);
+            }
+
+
+            //close the writer
+            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -52,7 +52,7 @@ public class MenuLine extends MenuBar {
 
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Открытие файла");
-        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("файл (*.xml)", "*.xml");
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("файл (*.xml, *.csv)", "*.xml", "*.csv");
         fileChooser.getExtensionFilters().add(extFilter);
 
         final FileChooser templateChooser = new FileChooser();
@@ -102,7 +102,11 @@ public class MenuLine extends MenuBar {
             File file1 = fileChooser.showSaveDialog(null);
             List <Organization> allDataU = tableOwners.getDataU();
             workFile.setDb(allDataU);
-            workFile.dbWrite(file1.getAbsolutePath());
+            if ( getFileExtension(file1).equals("csv")) {
+                workFile.writeCsv(file1.getAbsolutePath());
+            } else {
+                workFile.dbWrite(file1.getAbsolutePath());
+            }
         });
 
         loadFile.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
@@ -111,7 +115,11 @@ public class MenuLine extends MenuBar {
             File file1 = fileChooser.showOpenDialog(null);
             try
             {
-                workFile.dbRead(file1.getAbsolutePath());
+                if ( getFileExtension(file1).equals("csv")) {
+                    workFile.readCsv(file1.getAbsolutePath());
+                } else {
+                    workFile.dbRead(file1.getAbsolutePath());
+                }
                 tableOwners = new TableOwners();
                 source.setCenter(tableOwners);
                 inU.addAll(workFile.getDb());

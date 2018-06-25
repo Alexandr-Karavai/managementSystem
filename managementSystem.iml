@@ -23,5 +23,6 @@
     <orderEntry type="library" name="org.controlsfx:controlsfx:9.0.0" level="project" />
     <orderEntry type="library" name="org.apache.poi:poi-ooxml:3.11" level="project" />
     <orderEntry type="library" name="org.apache.poi:poi-ooxml-schemas:3.11" level="project" />
+    <orderEntry type="library" name="com.opencsv:opencsv:4.1" level="project" />
   </component>
 </module>
