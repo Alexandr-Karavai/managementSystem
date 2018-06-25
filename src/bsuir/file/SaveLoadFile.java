@@ -15,10 +15,7 @@ import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -213,10 +210,10 @@ public class SaveLoadFile {
             Owner ownerOrganization;
 
             for(String[] row : allRows){
-                System.out.println(Arrays.toString(row));
-
-                ownerOrganization = new Owner(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], row[16]);
-                db.add(new Organization(ownerOrganization, row[17], row[18], row[19], row[20], row[21], row[22], row[23], row[24]));
+                ownerOrganization = new Owner(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7],
+                        row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], row[16]);
+                db.add(new Organization(ownerOrganization, row[17], row[18], row[19],
+                        row[20], row[21], row[22], row[23], row[24]));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -227,9 +224,14 @@ public class SaveLoadFile {
     public void writeCsv(String filePath) {
         try {
 
-            String csv = "data.csv";
+            OutputStream os = new FileOutputStream(filePath);
+            os.write(239);
+            os.write(187);
+            os.write(191);
 
-            CSVWriter writer = new CSVWriter(new FileWriter(filePath));
+            PrintWriter w = new PrintWriter(new OutputStreamWriter(os, "UTF-8"));
+
+            CSVWriter writer = new CSVWriter(w);
 
             for (int i = 0; i < db.size(); i++) {
                 Organization dbOrganization = db.get(i);
@@ -269,9 +271,11 @@ public class SaveLoadFile {
                 writer.writeNext(record);
             }
 
-
             //close the writer
             writer.close();
+
+            w.flush();
+            w.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

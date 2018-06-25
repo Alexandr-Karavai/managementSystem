@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4cff6a-4f0f-45bf-bc7b-aa4ac7f661e3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_opencsv_opencsv_4_1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Найденова Виола Валерьевна.doc" afterPath="" />
       <change beforePath="$PROJECT_DIR$/documents/gen_doc/package/TEST_Рожков Сергей.doc" afterPath="" />
@@ -13,9 +12,8 @@
       <change beforePath="$PROJECT_DIR$/documents/payer.xml" afterPath="$PROJECT_DIR$/documents/payer.xml" />
       <change beforePath="$PROJECT_DIR$/documents/templates/test.docx" afterPath="$PROJECT_DIR$/documents/templates/test.docx" />
       <change beforePath="$PROJECT_DIR$/documents/templates/Заявление_шаблон.docx" afterPath="$PROJECT_DIR$/documents/templates/Заявление_шаблон.docx" />
-      <change beforePath="$PROJECT_DIR$/managementSystem.iml" afterPath="$PROJECT_DIR$/managementSystem.iml" />
+      <change beforePath="$PROJECT_DIR$/documents/Реестр.csv" afterPath="$PROJECT_DIR$/documents/Реестр.csv" />
       <change beforePath="$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java" afterPath="$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java" />
-      <change beforePath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" afterPath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
       <change beforePath="$PROJECT_DIR$/src/bsuir/view/TableOwners.java" afterPath="$PROJECT_DIR$/src/bsuir/view/TableOwners.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,7 +56,7 @@
       <file leaf-file-name="MenuLine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="1547">
               <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
               <folding>
                 <element signature="e#5592#5635#0" expanded="false" />
@@ -70,11 +68,10 @@
       <file leaf-file-name="SaveLoadFile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
+            <state relative-caret-position="912">
+              <caret line="215" column="24" lean-forward="false" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="24" />
               <folding>
                 <element signature="method#dbWrite#1;class#SaveLoadFile#0" expanded="false" />
-                <element signature="method#writeCsv#0;class#SaveLoadFile#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -208,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -229,6 +226,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,10 +283,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,7 +450,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -516,17 +513,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="102">
             <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -837,7 +834,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="1547">
           <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
           <folding>
             <element signature="e#5592#5635#0" expanded="false" />
@@ -847,11 +844,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/file/SaveLoadFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
+        <state relative-caret-position="912">
+          <caret line="215" column="24" lean-forward="false" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="24" />
           <folding>
             <element signature="method#dbWrite#1;class#SaveLoadFile#0" expanded="false" />
-            <element signature="method#writeCsv#0;class#SaveLoadFile#0" expanded="false" />
           </folding>
         </state>
       </provider>
