@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4cff6a-4f0f-45bf-bc7b-aa4ac7f661e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bsuir/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsuir/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +22,8 @@
       <file leaf-file-name="AddDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bsuir/view/AddDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1543">
-              <caret line="117" column="69" selection-start-line="117" selection-start-column="69" selection-end-line="117" selection-end-column="69" />
+            <state relative-caret-position="82">
+              <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="96" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,50 +31,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableOwners.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/TableOwners.java">
+      <file leaf-file-name="GenDocTable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuLine.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="139" column="17" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
+            <state relative-caret-position="268">
+              <caret line="179" column="27" selection-start-line="179" selection-start-column="27" selection-end-line="179" selection-end-column="27" />
               <folding>
-                <element signature="e#5592#5635#0" />
+                <element signature="e#4419#4469#0" />
+                <element signature="e#7531#7564#0" />
+                <element signature="e#11706#17114#0" />
+                <element signature="e#17120#19931#0" />
+                <element signature="e#19937#20807#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddAccounting.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/view/AddAccounting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="69" column="29" lean-forward="true" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Owner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/model/Owner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="51" selection-start-line="45" selection-start-column="4" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Organization.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -126,7 +90,6 @@
         <option value="$PROJECT_DIR$/src/bsuir/controller/Components.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/MyTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/genTableView.fxml" />
-        <option value="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
         <option value="$PROJECT_DIR$/src/bsuir/file/GenDocFile.java" />
         <option value="$PROJECT_DIR$/src/bsuir/model/AccountingMonth.java" />
         <option value="$PROJECT_DIR$/src/bsuir/TagsForFile.java" />
@@ -143,6 +106,7 @@
         <option value="$PROJECT_DIR$/src/bsuir/view/TableOwners.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/AddDialog.java" />
         <option value="$PROJECT_DIR$/src/bsuir/view/MenuLine.java" />
+        <option value="$PROJECT_DIR$/src/bsuir/view/GenDocTable.java" />
       </list>
     </option>
   </component>
@@ -405,7 +369,7 @@
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="40" />
+      <option name="time" value="42" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -463,17 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5389">
-          <caret line="334" column="11" selection-start-line="321" selection-start-column="16" selection-end-line="334" selection-end-column="11" />
-          <folding>
-            <element signature="method#createSimpleTable#0;class#GenDocTable#0" />
-            <element signature="method#calcSizeTable#0;class#GenDocTable#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/view/TableOwners.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/model/Organization.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -620,22 +566,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="156" column="36" lean-forward="true" selection-start-line="156" selection-start-column="36" selection-end-line="156" selection-end-column="36" />
+          <folding>
+            <element signature="e#5592#5635#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/TableOwners.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bsuir/view/AddDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1543">
-          <caret line="117" column="69" selection-start-line="117" selection-start-column="69" selection-end-line="117" selection-end-column="69" />
+        <state relative-caret-position="82">
+          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="96" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bsuir/view/MenuLine.java">
+    <entry file="file://$PROJECT_DIR$/src/bsuir/view/GenDocTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="139" column="17" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
+        <state relative-caret-position="268">
+          <caret line="179" column="27" selection-start-line="179" selection-start-column="27" selection-end-line="179" selection-end-column="27" />
           <folding>
-            <element signature="e#5592#5635#0" />
+            <element signature="e#4419#4469#0" />
+            <element signature="e#7531#7564#0" />
+            <element signature="e#11706#17114#0" />
+            <element signature="e#17120#19931#0" />
+            <element signature="e#19937#20807#0" />
           </folding>
         </state>
       </provider>

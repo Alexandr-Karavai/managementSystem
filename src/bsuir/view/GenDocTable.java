@@ -3,9 +3,12 @@ package bsuir.view;
 import bsuir.model.Organization;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
@@ -17,7 +20,6 @@ import java.util.Optional;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
-import org.controlsfx.control.ToggleSwitch;
 
 public class GenDocTable {
 
@@ -101,34 +103,12 @@ public class GenDocTable {
     public ChoiceBox tagBox_15 = new ChoiceBox<String>(tagList);
     public ChoiceBox tagBox_16 = new ChoiceBox<String>(tagList);
 
-//    public CheckBox add_ID = new CheckBox("ID");
-//    public CheckBox add_FIO = new CheckBox("ФИО");
-//    public CheckBox add_DATE_REG = new CheckBox("Дата регистрации");
-//    public CheckBox add_INV = new CheckBox("Инвентарный номер");
-//    public CheckBox add_BOX_SQ = new CheckBox("Площадь");
-//    public CheckBox add_NUM = new CheckBox("Номер");
-//    public CheckBox add_PASP = new CheckBox("Серия паспорта");
-//    public CheckBox add_PW = new CheckBox("Кем выдан");
-//    public CheckBox add_PD = new CheckBox("Дата выдачи");
-//    public CheckBox add_PN = new CheckBox("ПН");
-//    public CheckBox add_PHONE = new CheckBox("Телефон");
-//    public CheckBox add_MAIL = new CheckBox("E-mail");
-//    public CheckBox add_ADDRESS = new CheckBox("Адрес");
-//    public CheckBox add_ADRREG = new CheckBox("Прописка");
-//    public CheckBox add_AUTO = new CheckBox("Авто");
-//    public CheckBox add_IND_DOG= new CheckBox("Номер договора");
-//    public CheckBox add_INDEX = new CheckBox("Дата заключения");
-//    public CheckBox add_SQPR = new CheckBox("SQPR");
-//    public CheckBox add_PROC = new CheckBox("Процент");
-//    public CheckBox add_SQ = new CheckBox("Площадь");
-//    public CheckBox add_OSAVTO = new CheckBox("Номер гаража");
-//    public CheckBox add_UR = new CheckBox("Уровень");
-//    public CheckBox add_OSSPECTR = new CheckBox("Описание");
-//    public CheckBox add_NED1 = new CheckBox("Приложение 1");
-//    public CheckBox add_NED2 = new CheckBox("Приложение 2");
+    private Button addXls = new Button("Создать xls");
+    private Button addDocx = new Button("Создать docx");
 
-    final TextField firstTableRecord = new TextField();
-    final TextField lastTableRecord = new TextField();
+    private Label nameCellLabel = new Label("Название колонки");
+    private Label nameSwitchLabel = new Label("Выкл/Вкл");
+    private Label nameTagLabel = new Label("Тег в реестре");
 
     private List<Organization> db = FXCollections.observableArrayList();
 
@@ -136,188 +116,61 @@ public class GenDocTable {
 
         this.db = allDataU;
 
-        Pane pane = new Pane();
+        // Create a ScrollPane
+        ScrollPane scrollPane = new ScrollPane();
+
+        final BorderPane container = new BorderPane();
+
+        HBox hBox = new HBox();
+        VBox vBoxR = new VBox();
+        VBox vBoxL = new VBox();
+        VBox vBoxM =new VBox();
+
+        vBoxL.getChildren().addAll(nameCellLabel,
+                text_1, text_2, text_3 ,text_4 ,text_5, text_6, text_7,
+                text_8, text_9, text_10, text_11, text_12, text_13, text_14,
+                text_15, text_16
+        );
+        vBoxR.getChildren().addAll(nameTagLabel,
+                tagBox_1, tagBox_2, tagBox_3, tagBox_4, tagBox_5, tagBox_6, tagBox_7,
+                tagBox_8, tagBox_9, tagBox_10, tagBox_11, tagBox_12, tagBox_13, tagBox_14,
+                tagBox_15, tagBox_16
+        );
+        vBoxM.getChildren().addAll(nameSwitchLabel,
+                tSwitch_1, tSwitch_2, tSwitch_3, tSwitch_4, tSwitch_5, tSwitch_6, tSwitch_7,
+                tSwitch_8, tSwitch_9, tSwitch_10, tSwitch_11, tSwitch_12, tSwitch_13, tSwitch_14,
+                tSwitch_15, tSwitch_16
+        );
+
+        vBoxL.setPadding(new Insets(20, 20, 20, 90));
+        vBoxR.setPadding(new Insets(20, 70, 20, 50));
+        vBoxM.setPadding(new Insets(20, 40, 20, 120));
+
+        vBoxL.setSpacing(35);
+        vBoxR.setSpacing(35);
+        vBoxM.setSpacing(45);
+
+        hBox.getChildren().addAll(addXls, addDocx);
+        hBox.setPadding(new Insets(20, 250, 30, 370));
+        hBox.setSpacing(15);
+
+        container.setLeft(vBoxL);
+        container.setCenter(vBoxM);
+        container.setRight(vBoxR);
+
+        container.setBottom(hBox);
+
+        // Set content for ScrollPane
+        scrollPane.setContent(container);
+
+        // Always show vertical scroll bar
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
 
         primaryStage.setTitle("Создать таблицу");
-        Scene scene;
 
-        scene = new Scene(pane, 640, 880);
+        Scene scene = new Scene(scrollPane, 950, 550);
         primaryStage.setScene(scene);
         primaryStage.show();
-
-        Label nameCellLabel = new Label("Название колонки");
-        nameCellLabel.setLayoutX(50);
-        nameCellLabel.setLayoutY(10);
-
-        Label nameSwitchLabel = new Label("Выкл/Вкл");
-        nameSwitchLabel.setLayoutX(280);
-        nameSwitchLabel.setLayoutY(10);
-
-        Label nameTagLabel = new Label("Тег в реестре");
-        nameTagLabel.setLayoutX(400);
-        nameTagLabel.setLayoutY(10);
-
-        text_1.setLayoutX(50);
-        text_1.setLayoutY(50);
-
-        text_2.setLayoutX(50);
-        text_2.setLayoutY(100);
-
-        text_3.setLayoutX(50);
-        text_3.setLayoutY(150);
-
-        text_4.setLayoutX(50);
-        text_4.setLayoutY(200);
-
-        text_5.setLayoutX(50);
-        text_5.setLayoutY(250);
-
-        text_6.setLayoutX(50);
-        text_6.setLayoutY(300);
-
-        text_7.setLayoutX(50);
-        text_7.setLayoutY(350);
-
-        text_8.setLayoutX(50);
-        text_8.setLayoutY(400);
-
-        text_9.setLayoutX(50);
-        text_9.setLayoutY(450);
-
-        text_10.setLayoutX(50);
-        text_10.setLayoutY(500);
-
-        text_11.setLayoutX(50);
-        text_11.setLayoutY(550);
-
-        text_12.setLayoutX(50);
-        text_12.setLayoutY(600);
-
-        text_13.setLayoutX(50);
-        text_13.setLayoutY(650);
-
-        text_14.setLayoutX(50);
-        text_14.setLayoutY(700);
-
-        text_15.setLayoutX(50);
-        text_15.setLayoutY(750);
-
-        text_16.setLayoutX(50);
-        text_16.setLayoutY(800);
-
-        tSwitch_1.setLayoutX(270);
-        tSwitch_1.setLayoutY(55);
-
-        tSwitch_2.setLayoutX(270);
-        tSwitch_2.setLayoutY(105);
-
-        tSwitch_3.setLayoutX(270);
-        tSwitch_3.setLayoutY(155);
-
-        tSwitch_4.setLayoutX(270);
-        tSwitch_4.setLayoutY(205);
-
-        tSwitch_5.setLayoutX(270);
-        tSwitch_5.setLayoutY(255);
-
-        tSwitch_6.setLayoutX(270);
-        tSwitch_6.setLayoutY(305);
-
-        tSwitch_7.setLayoutX(270);
-        tSwitch_7.setLayoutY(355);
-
-        tSwitch_8.setLayoutX(270);
-        tSwitch_8.setLayoutY(405);
-
-        tSwitch_9.setLayoutX(270);
-        tSwitch_9.setLayoutY(455);
-
-        tSwitch_10.setLayoutX(270);
-        tSwitch_10.setLayoutY(505);
-
-        tSwitch_11.setLayoutX(270);
-        tSwitch_11.setLayoutY(555);
-
-        tSwitch_12.setLayoutX(270);
-        tSwitch_12.setLayoutY(605);
-
-        tSwitch_13.setLayoutX(270);
-        tSwitch_13.setLayoutY(655);
-
-        tSwitch_14.setLayoutX(270);
-        tSwitch_14.setLayoutY(705);
-
-        tSwitch_15.setLayoutX(270);
-        tSwitch_15.setLayoutY(755);
-
-        tSwitch_16.setLayoutX(270);
-        tSwitch_16.setLayoutY(805);
-
-        tagBox_1.setLayoutX(400);
-        tagBox_1.setLayoutY(50);
-
-        tagBox_2.setLayoutX(400);
-        tagBox_2.setLayoutY(100);
-
-        tagBox_3.setLayoutX(400);
-        tagBox_3.setLayoutY(150);
-
-        tagBox_4.setLayoutX(400);
-        tagBox_4.setLayoutY(200);
-
-        tagBox_5.setLayoutX(400);
-        tagBox_5.setLayoutY(250);
-
-        tagBox_6.setLayoutX(400);
-        tagBox_6.setLayoutY(300);
-
-        tagBox_7.setLayoutX(400);
-        tagBox_7.setLayoutY(350);
-
-        tagBox_8.setLayoutX(400);
-        tagBox_8.setLayoutY(400);
-
-        tagBox_9.setLayoutX(400);
-        tagBox_9.setLayoutY(450);
-
-        tagBox_10.setLayoutX(400);
-        tagBox_10.setLayoutY(500);
-
-        tagBox_11.setLayoutX(400);
-        tagBox_11.setLayoutY(550);
-
-        tagBox_12.setLayoutX(400);
-        tagBox_12.setLayoutY(600);
-
-        tagBox_13.setLayoutX(400);
-        tagBox_13.setLayoutY(650);
-
-        tagBox_14.setLayoutX(400);
-        tagBox_14.setLayoutY(700);
-
-        tagBox_15.setLayoutX(400);
-        tagBox_15.setLayoutY(750);
-
-        tagBox_16.setLayoutX(400);
-        tagBox_16.setLayoutY(800);
-
-        Button addXls = new Button("Создать xls");
-        addXls.setMinSize(50, 20);
-        addXls.setLayoutX(150);
-        addXls.setLayoutY(840);
-
-        Button addDocx = new Button("Создать docx");
-        addDocx.setMinSize(50, 20);
-        addDocx.setLayoutX(350);
-        addDocx.setLayoutY(840);
-
-        pane.getChildren().addAll( addDocx, addXls, nameCellLabel, nameSwitchLabel, nameTagLabel,
-            text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10,
-            text_11, text_12, text_13, text_14, text_15, text_16, tSwitch_1, tSwitch_2,
-            tSwitch_3, tSwitch_4, tSwitch_5, tSwitch_6, tSwitch_7, tSwitch_8, tSwitch_9,
-            tSwitch_10, tSwitch_11, tSwitch_12, tSwitch_13, tSwitch_14, tSwitch_15, tSwitch_16,
-            tagBox_1, tagBox_2, tagBox_3, tagBox_4, tagBox_5, tagBox_6, tagBox_7, tagBox_8,
-            tagBox_9, tagBox_10, tagBox_11, tagBox_12, tagBox_13, tagBox_14, tagBox_15, tagBox_16);
 
         addDocx.setOnAction(event -> {
             try {
@@ -368,11 +221,6 @@ public class GenDocTable {
 
         Sheet sheet = book.createSheet(result.get());
 
-//        for ( int i = 0; i < calcSizeTable(); i++ ) {
-
-//            Organization owner = allOwner.get(i);
-
-            // Нумерация начинается с нуля
             Row row = sheet.createRow(0);
 
             if (tSwitch_1.isSelected()) {
@@ -439,45 +287,8 @@ public class GenDocTable {
                 Cell ind_dog = row.createCell(countCell++);
                 ind_dog.setCellValue(text_16.getText());
             }
-//            if (add_INDEX.isSelected()) {
-//                Cell index = row.createCell(countCell++);
-//                index.setCellValue(owner.getIndex());
-//            }
-//            if (add_SQPR.isSelected()) {
-//                Cell sqpr = row.createCell(countCell++);
-//                sqpr.setCellValue(owner.getSqpr());
-//            }
-//            if (add_PROC.isSelected()) {
-//                Cell proc = row.createCell(countCell++);
-//                proc.setCellValue(owner.getProc());
-//            }
-//            if (add_SQ.isSelected()) {
-//                Cell sq = row.createCell(countCell++);
-//                sq.setCellValue(owner.getSq());
-//            }
-//            if (add_OSAVTO.isSelected()) {
-//                Cell osavto = row.createCell(countCell++);
-//                osavto.setCellValue(owner.getOsavto());
-//            }
-//            if (add_UR.isSelected()) {
-//                Cell ur = row.createCell(countCell++);
-//                ur.setCellValue(owner.getUr());
-//            }
-//            if (add_OSSPECTR.isSelected()) {
-//                Cell osspectr = row.createCell(countCell++);
-//                osspectr.setCellValue(owner.getOsspectr());
-//            }
-//            if (add_NED1.isSelected()) {
-//                Cell ned1 = row.createCell(countCell++);
-//                ned1.setCellValue(owner.getNed_1());
-//            }
-//            if (add_NED2.isSelected()) {
-//                Cell ned2 = row.createCell(countCell++);
-//                ned2.setCellValue(owner.getNed_2());
-//            }
+
             size = countCell;
-            countCell=0;
-//        }
 
         // Меняем размер столбца
         for (int i=0; i<size; i++){
