@@ -28,7 +28,7 @@ public class Main extends Application {
 
         menuLine = new MenuLine(root, Main.this);
 
-        Scene scene = new Scene(root, 900, 450);
+        Scene scene = new Scene(root, 1200, 750);
         primaryStage.setScene(scene);
         primaryStage.show();
 

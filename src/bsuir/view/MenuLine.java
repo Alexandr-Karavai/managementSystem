@@ -137,6 +137,8 @@ public class MenuLine extends MenuBar {
             }
         });
 
+        addRecord.setAccelerator(KeyCombination.keyCombination("Ctrl+Shift+A"));
+
         addRecord.setOnAction(event -> {
 
             AddDialog ARDialog = new AddDialog();

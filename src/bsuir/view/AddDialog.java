@@ -5,12 +5,10 @@ package bsuir.view;
         import bsuir.view.MenuLine;
         import javafx.collections.FXCollections;
         import javafx.collections.ObservableList;
+        import javafx.geometry.Insets;
         import javafx.scene.Scene;
-        import javafx.scene.control.Button;
-        import javafx.scene.control.ChoiceBox;
-        import javafx.scene.control.Label;
-        import javafx.scene.control.TextField;
-        import javafx.scene.layout.Pane;
+        import javafx.scene.control.*;
+        import javafx.scene.layout.*;
         import javafx.stage.Stage;
 
         import java.util.List;
@@ -18,118 +16,127 @@ package bsuir.view;
 
 public class AddDialog {
 
+    final TextField idText = new TextField();
+    final TextField fioText = new TextField();
+    final TextField dateRegText = new TextField();
+    final TextField invText = new TextField();
+    final TextField boxSqText = new TextField();
+    final TextField numText = new TextField();
+    final TextField paspText = new TextField();
+    final TextField pwText = new TextField();
+    final TextField pdText = new TextField();
+    final TextField pnText = new TextField();
+    final TextField phoneText = new TextField();
+    final TextField mailText = new TextField();
+    final TextField addressText = new TextField();
+    final TextField adrregText = new TextField();
+    final TextField autoText = new TextField();
+    final TextField indDogText = new TextField();
+    final TextField indexText = new TextField();
+    final TextField sqprText = new TextField();
+    final TextField procText = new TextField();
+    final TextField sqText = new TextField();
+    final TextField osAvtoText = new TextField();
+    final TextField urText = new TextField();
+    final TextField osspectrText = new TextField();
+    final TextField nedOneText = new TextField();
+    final TextField nedTwoText = new TextField();
+
+    private Label idLabel = new Label("ID: ");
+    private Label fioLabel = new Label("ФИО собственника: ");
+    private Label dateRegLabel = new Label("Дата госрегистрации: ");
+    private Label invLabel = new Label("Инвентарный номер: ");
+    private Label boxSqLabel = new Label("Площадь: ");
+    private Label numLabel = new Label("Свидетельство о госрегистрации: ");
+    private Label paspLabel = new Label("Серия паспорта: ");
+    private Label pwLabel = new Label("Кем выдан: ");
+    private Label pdLabel = new Label("Дата выдачи: ");
+    private Label pnLabel = new Label("И.Н. паспорта: ");
+    private Label phoneLabel = new Label("Телефон: ");
+    private Label mailLabel = new Label("E-mail: ");
+    private Label addressLabel = new Label("Адрес: ");
+    private Label adrregLabel = new Label("Прописка: ");
+    private Label autoLabel = new Label("Авто: ");
+    private Label indDogLabel = new Label("Номер договора: ");
+    private Label indexLabel = new Label("Дата заключения: ");
+    private Label sqprLabel = new Label("SQPR: ");
+    private Label procLabel = new Label("Процент: ");
+    private Label sqLabel = new Label("Площадь: ");
+    private Label osAvtoLabel = new Label("Номер гаража: ");
+    private Label urLabel = new Label("Уровень: ");
+    private Label osspectrLabel = new Label("Описание: ");
+    private Label nedOneLabel = new Label("Приложение 1: ");
+    private Label nedTwoLabel = new Label("Приложение 2: ");
+
+    private Button addAcc = new Button("Добавить");
+
     public void start(final Stage primaryStage, final List<Organization> allDataU, final MenuLine parentClass) {
 
-        Pane pane = new Pane();
-        //* BorderPane pane = new BorderPane();
-        primaryStage.setTitle("Добавить запись");
-        Scene scene;
+        // Create a ScrollPane
+        ScrollPane scrollPane = new ScrollPane();
 
-        scene = new Scene(pane, 640, 450);
+        final BorderPane container = new BorderPane();
+
+        HBox hBox = new HBox();
+        VBox vBoxR = new VBox();
+        VBox vBoxL = new VBox();
+
+        vBoxL.getChildren().addAll(
+                idLabel, fioLabel, dateRegLabel, invLabel, boxSqLabel,
+                numLabel, paspLabel, pwLabel, pdLabel, pnLabel, phoneLabel,
+                mailLabel, addressLabel, adrregLabel, autoLabel, indDogLabel,
+                indexLabel, sqprLabel, procLabel, sqLabel, osAvtoLabel, urLabel,
+                osspectrLabel, nedOneLabel, nedTwoLabel
+        );
+        vBoxR.getChildren().addAll(
+                idText, fioText, dateRegText, invText, boxSqText,
+                numText, paspText, pwText, pdText, pnText, phoneText,
+                mailText, addressText, adrregText, autoText, indDogText,
+                indexText, sqprText, procText, sqText, osAvtoText, urText,
+                osspectrText, nedOneText, nedTwoText
+        );
+
+        vBoxL.setPadding(new Insets(20, 20, 20, 90));
+        vBoxR.setPadding(new Insets(20, 70, 20, 50));
+
+        vBoxL.setSpacing(35);
+        vBoxR.setSpacing(25);
+
+        hBox.getChildren().addAll(addAcc);
+
+        hBox.setPadding(new Insets(20, 280, 30, 320));
+
+        container.setLeft(vBoxL);
+        container.setRight(vBoxR);
+
+        container.setBottom(hBox);
+
+        // Set content for ScrollPane
+        scrollPane.setContent(container);
+
+        // Always show vertical scroll bar
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+
+        primaryStage.setTitle("Добавить запись");
+
+        Scene scene = new Scene(scrollPane, 750, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        Button add = new Button("Добавить");
-        add.setMinSize(50, 20);
-        add.setLayoutX(150);
-        add.setLayoutY(400);
-
-        Label idLabel = new Label("ID");
-        idLabel.setLayoutX(100);
-        idLabel.setLayoutY(20);
-
-        Label fioLabel = new Label("ФИО");
-        fioLabel.setLayoutX(100);
-        fioLabel.setLayoutY(100);
-
-        Label dateRegLabel = new Label("Дата регистрации");
-        dateRegLabel.setLayoutX(100);
-        dateRegLabel.setLayoutY(180);
-
-        Label invLabel = new Label("Инвентарный номер");
-        invLabel.setLayoutX(100);
-        invLabel.setLayoutY(260);
-
-        Label boxSqLabel = new Label("Площадь");
-        boxSqLabel.setLayoutX(100);
-        boxSqLabel.setLayoutY(340);
-
-        Label numLabel = new Label("Номер");
-        numLabel.setLayoutX(100);
-        numLabel.setLayoutY(420);
-
-        Label paspLabel = new Label("Серия паспорта");
-        paspLabel.setLayoutX(100);
-        paspLabel.setLayoutY(500);
-
-        Label pwLabel = new Label("Кем выдан");
-        pwLabel.setLayoutX(100);
-        pwLabel.setLayoutY(580);
-
-        Label pdLabel = new Label("Дата выдачи");
-        pdLabel.setLayoutX(100);
-        pdLabel.setLayoutY(660);
-
-
-        final TextField facultyText = new TextField();
-        facultyText.setLayoutX(300);
-        facultyText.setLayoutY(20);
-
-        final TextField nameOfDepartmentText = new TextField();
-        nameOfDepartmentText.setLayoutX(300);
-        nameOfDepartmentText.setLayoutY(100);
-
-        final TextField fioText = new TextField();
-        fioText.setLayoutX(300);
-        fioText.setLayoutY(180);
-
-        ObservableList<String> titleList = FXCollections.observableArrayList
-                (
-                        "мл. науч. сотр.",
-                        "науч. сотр.",
-                        "ст. науч. сотр.",
-                        "вед. науч. сотр.",
-                        "гл. науч. сотр.",
-                        "доц.",
-                        "проф.",
-                        "чл.-кор.",
-                        "акад."
-                );
-        ChoiceBox<String> titleBox = new ChoiceBox<String>(titleList);
-        titleBox.setLayoutX(300);
-        titleBox.setLayoutY(260);
-        titleBox.setPrefSize(185,30);
-
-        ObservableList<String> academicList = FXCollections.observableArrayList
-                (
-                        "кандидат наук",
-                        "доктор наук"
-                );
-        ChoiceBox<String> academicBox = new ChoiceBox<String>(academicList);
-
-        academicBox.setLayoutX(300);
-        academicBox.setLayoutY(340);
-        academicBox.setPrefSize(185,30);
-
-
-        pane.getChildren().addAll(
-                idLabel, fioText,
-                fioLabel,
-                dateRegLabel, nameOfDepartmentText,
-                invLabel, academicBox,
-                boxSqLabel, titleBox,
-                numLabel, paspLabel, pwLabel, pdLabel,
-                add);
-
-//        add.setOnAction(event -> {
-//            Owner owner = new Owner(fioText.getText(),
-//                    titleBox.getSelectionModel().getSelectedItem(), academicBox.getSelectionModel().getSelectedItem());
-//            allDataU.add(new Organization(facultyText.getText(), nameOfDepartmentText.getText(),owner));
-//            parentClass.parentClass.updatePage();
-//            primaryStage.close();
-//        });
-
+        addAcc.setOnAction(event -> {
+            Owner owner = new Owner(
+                    idText.getText(), fioText.getText(), dateRegText.getText(), invText.getText(),
+                    boxSqText.getText(), numText.getText(), paspText.getText(), pwText.getText(),
+                    pdText.getText(), pnText.getText(), phoneText.getText(), mailText.getText(),
+                    addressText.getText(), adrregText.getText(), autoText.getText(),
+                    indDogText.getText(), indexText.getText()
+            );
+            allDataU.add(new Organization(
+                    owner, sqprText.getText(), procText.getText(), sqText.getText(), osAvtoText.getText(),
+                    urText.getText(), osspectrText.getText(), nedOneText.getText(), nedTwoText.getText())
+            );
+            parentClass.parentClass.updatePage();
+            primaryStage.close();
+        });
     }
-
-
 }
